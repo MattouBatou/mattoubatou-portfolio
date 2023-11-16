@@ -1,3 +1,5 @@
+@import '~sass-mq/mq';
+
 // Variables, functions and mixins
 @import
 	'./abstracts/variables/layout',
@@ -35,10 +37,13 @@
 	'./layout/navigation';
 
 // Components
+@import './components/content/contentCollection.scss';
+
+// Sections
 @import
-	'./components/header.scss',
-	'./components/main.scss',
-	'./components/footer.scss';
+	'./sections/header.scss',
+	'./sections/main.scss',
+	'./sections/footer.scss';
 
 // Pages
 // @import './';

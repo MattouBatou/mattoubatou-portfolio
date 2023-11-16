@@ -23,9 +23,15 @@ html {
 
 html,
 body {
+	padding: 0;
+	margin: 0;
 	height: 100%;
 	width: 100%;
-	background-color: white;
+	background-color: $color-neutral-shade-90;
+}
+
+body {
+	padding-top: $layout-header-height;
 }
 
 h2 {
@@ -36,11 +42,11 @@ h2 {
    * Basic styles for links
    */
 a {
-	color: $color-theme-primary;
+	color: $color-theme-link;
 	text-decoration: none;
 
 	@include on-event {
-		color: $color-theme-primary-dark;
+		color: $color-theme-link-dark;
 		text-decoration: underline;
 	}
 }

@@ -4,6 +4,7 @@ $color-white: #fff;
 $color-black: #000;
 
 // Shade, tint varients
+$color-neutral-shade-90: darken($color-white, 90%);
 $color-neutral-shade-75: darken($color-white, 75%);
 $color-neutral-shade-50: darken($color-white, 50%);
 $color-neutral-shade-25: darken($color-white, 25%);
