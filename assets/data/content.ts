@@ -20,10 +20,12 @@ export interface ContentItem {
 
 // ContentCollection
 // A collection of content under one category, usually a company I did work for.
-export interface ContentCollection {
+export interface ContentCollectionDetails {
     title: string,
     url: string,
     thumbnail: string,
+}
+export interface ContentCollection extends ContentCollectionDetails {
     content: ContentItem | ContentItem[]
 };
 

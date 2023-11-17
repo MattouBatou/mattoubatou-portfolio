@@ -1,16 +1,20 @@
 import React, { ReactNode } from 'react';
 
-import Content from '../../../assets/data/content';
+import Content from 'assets/data/content';
+
+import ContentGridItem from 'components/Content-Grid/ContentGridItem';
 
 export default function Main() {
     let renderContentCollections = () => {
         let node: ReactNode[] = [];
-        Content.forEach((collection) => {
+        Content.forEach((collection, collectionIndex) => {
             node.push(
-                <div className="content-collection content-grid-item" style={{backgroundImage: `url(${collection.thumbnail})`}}>
-                    <h2>{collection.title}</h2>
-                    <a href={collection.url}>link</a>
-                </div>
+                <ContentGridItem
+                    key={collection.title+collectionIndex}
+                    title={collection.title}
+                    url={collection.url}
+                    thumbnail={collection.thumbnail}
+                />
             );
         });
 

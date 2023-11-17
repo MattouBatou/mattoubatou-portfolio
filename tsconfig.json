@@ -1,7 +1,11 @@
 {
 	"compilerOptions": {
 		"allowJs": false,
-		"baseUrl": "src",
+		"baseUrl": "./",
+		"paths": {
+			"*": [ "src/*" ],
+			"assets/*": [ "assets/*" ],
+		},
 		"esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react",
@@ -37,6 +41,10 @@
 		"src/**/*",
 		"src/**/*.ts",
 		"src/**/*.tsx",
-		"./**/*.d.ts"
+		"./**/*.d.ts",
+		"assets",
+		"assets/**/*",
+		"assets/**/*.ts",
+		"assets/**/*.tsx",
 	]
 }
