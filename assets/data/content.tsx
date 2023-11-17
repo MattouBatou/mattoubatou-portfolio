@@ -1,7 +1,8 @@
 export enum ContentType {
     image,
     iframe,
-    imageUrl
+    imageUrl,
+    videoUrl
 };
 
 // ContentItem

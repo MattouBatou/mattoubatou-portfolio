@@ -7,7 +7,7 @@ export default function Main() {
         let node: ReactNode[] = [];
         Content.forEach((collection) => {
             node.push(
-                <div className="content-collection" style={{backgroundImage: `url(${collection.thumbnail})`}}>
+                <div className="content-collection content-grid-item" style={{backgroundImage: `url(${collection.thumbnail})`}}>
                     <h2>{collection.title}</h2>
                     <a href={collection.url}>link</a>
                 </div>
@@ -18,7 +18,7 @@ export default function Main() {
     };
 
     return(
-        <main className="app-main">
+        <main className="app-main content-grid">
             {renderContentCollections()}
         </main>
     );
