@@ -3,15 +3,30 @@
     display: flex;
     flex-direction: row;
     gap: 40px;
-    height: 81px;
     justify-content: space-between;
     left: 0;
-    max-height: 100vh;
-    padding: 20px 24px;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1032;
     background-color: $color-theme-background;
     color: $color-theme-secondary;
+
+    a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+    }
+
+    h1 {
+        color: $color-theme-secondary;
+    }
+
+    @include mq($from: xs, $until: lg) {
+        height: $layout-header-height-sm;
+        padding: 10px 12px;
+    }
+
+    @include mq($from: lg, $until: inf) {
+        height: $layout-header-height-lg;
+        padding: 20px 24px;
+    }
 }

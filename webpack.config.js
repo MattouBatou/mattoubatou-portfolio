@@ -15,12 +15,14 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.js',
+		publicPath: '/'
 	},
 	devServer: {
 		static: path.resolve(__dirname, 'build'),
 		compress: false,
 		port: 9000,
 		https: false,
+		historyApiFallback: true
 	},
 	module: {
 		rules: [

@@ -31,19 +31,18 @@
 	'./base/typography';
 
 // Layout
-@import
-	'./layout/footer',
-	'./layout/header',
-	'./layout/navigation';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navigation';
 
 // Components
-@import './components/content/contentCollection.scss';
+@import './components/content/contentCollection';
+@import './components/project/project';
 
 // Sections
-@import
-	'./sections/header.scss',
-	'./sections/main.scss',
-	'./sections/footer.scss';
+@import './sections/header';
+@import './sections/main';
+@import './sections/footer';
 
 // Pages
 // @import './';

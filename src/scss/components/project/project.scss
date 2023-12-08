@@ -1,0 +1,77 @@
+@import './projectNav.scss';
+
+.project-container {
+    .project-item {
+        display: grid;
+        //grid-template-columns: 1fr auto;
+        grid-template-columns: 6fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
+        padding-right: 24px;
+        min-height: calc(100vh - #{$layout-header-height-lg});
+        overflow: hidden;
+
+        @include mq($from: xs, $until: lg) {
+            grid-template-columns: 1fr;
+            padding:0;
+            min-height: calc(100vh - #{$layout-header-height-sm});
+        }
+
+        .project-content {
+            background-color: black;
+            border-radius: $layout-border-radius;
+            padding: 24px;
+
+            .project-content-iframe {
+                border: 0;
+                overflow: hidden;
+                border-radius: $layout-border-radius;
+                width: 100%;
+
+                @include mq($from: xs, $until: lg) {
+                    max-height: calc(90vh - #{$layout-header-height-sm}) !important;
+                }
+
+                @include mq($from: lg, $until: inf) {
+                    max-height: calc(90vh - #{$layout-header-height-lg}) !important;
+                }
+            
+            }
+
+            .project-content-image {
+                max-width: 100%;
+                padding: 0 0.5em;
+                display: block;
+                margin: 0 auto;
+
+                @include mq($from: xs, $until: lg) {
+                    max-height: calc(90vh - #{$layout-header-height-sm}) !important;
+                }
+                
+                @include mq($from: lg, $until: inf) {
+                    max-height: calc(90vh - #{$layout-header-height-lg}) !important;
+                }
+            }
+        }
+
+        .sticky-wrapper {
+            @include mq($from: lg, $until: inf) {
+                position: sticky;
+                top: -$layout-header-height-lg;
+                max-height: calc(100vh - #{$layout-header-height-lg});
+            }
+
+            .project-details {
+                text-align: left;
+                background-color: $color-theme-gray;
+                border-radius: $layout-border-radius;
+                padding: 0.5em;
+
+                @include mq($from: lg, $until: inf) {
+                    height: 200vh;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.project-container {
+    .project-nav {
+        margin: 0 auto;
+        width: 50%;
+        .project-nav-button {
+            cursor: pointer;
+            display: inline-block;
+            cursor: pointer;
+            width: 16px;
+            background-color: $color-theme-secondary-dark;
+            padding: auto;
+            text-align: center;
+            border-radius: $layout-border-radius;
+            margin: 5px;
+
+            &:hover {
+                color: lighten($color-theme-primary, 30%);
+                background-color: lighten($color-theme-secondary-dark, 10%);
+            }
+            &.active {
+                color: lighten($color-theme-primary, 40%);
+                background-color: lighten($color-theme-secondary-dark, 20%);
+            }
+        }
+    }
+}

@@ -1,12 +1,18 @@
 import React from 'react';
-import { ContentCollectionDetails} from '../../../assets/data/content';
+import { ContentCollectionDetails } from 'assets/data/content';
+import { Link } from 'react-router-dom';
 
-export default function ContentGridItem(contentCollectionDetails: ContentCollectionDetails) {
+type Props = Spread<ContentCollectionDetails, { description: string, collectionId: number }>;
+
+export default function ContentGridItem({ title, thumbnail, description, collectionId }: Props) {
 
 return (
-    <div className="content-collection content-grid-item" style={{backgroundImage: `url(${contentCollectionDetails.thumbnail})`}}>
-        <h2>{contentCollectionDetails.title}</h2>
-        <a href={contentCollectionDetails.url}>link</a>
-    </div>
+    <Link to={`project/${collectionId}`} className="content-collection content-grid-item">
+        <div className="content-collection-details">
+            <h2>{title}</h2>
+            <div className="content-collection-description">{description}</div>
+        </div>
+        <div className="content-collection-thumbnail" style={{backgroundImage: `url(${thumbnail})`}}/>
+    </Link>
     );
 }

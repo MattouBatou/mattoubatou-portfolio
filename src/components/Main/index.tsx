@@ -1,29 +1,14 @@
-import React, { ReactNode } from 'react';
-
+import React from 'react';
+import { useOutlet } from 'react-router-dom';
 import Content from 'assets/data/content';
-
-import ContentGridItem from 'components/Content-Grid/ContentGridItem';
+import ListProjects from 'components/Main/ListProjects';
 
 export default function Main() {
-    let renderContentCollections = () => {
-        let node: ReactNode[] = [];
-        Content.forEach((collection, collectionIndex) => {
-            node.push(
-                <ContentGridItem
-                    key={collection.title+collectionIndex}
-                    title={collection.title}
-                    url={collection.url}
-                    thumbnail={collection.thumbnail}
-                />
-            );
-        });
-
-        return node;
-    };
+    const outlet = useOutlet();
 
     return(
-        <main className="app-main content-grid">
-            {renderContentCollections()}
+        <main className="app-main">
+            {outlet || ListProjects(Content)}
         </main>
     );
 }

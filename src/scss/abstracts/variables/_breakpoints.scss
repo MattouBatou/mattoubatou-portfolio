@@ -18,8 +18,12 @@ $mq-breakpoints: (
 	xl: 1440px,
 	xg: 1920px,
 	xxg: 2560px,
-	xxxg: 3840px
+	xxxg: 3840px,
+	inf: 99999px,
 );
+
+$mq-landscape: '(orientation: landscape)';
+$mq-portrait: '(orientation: portrait)';
 
 // Define the breakpoint from the $mq-breakpoints list that should
 // be used as the target width when outputting a static stylesheet

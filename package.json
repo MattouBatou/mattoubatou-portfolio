@@ -22,7 +22,7 @@
 	"dependencies": {
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
-		"react-router-dom": "^6.3.0",
+		"react-router-dom": "^6.20.1",
 		"sass-mq": "^4.0.2"
 	},
 	"devDependencies": {
