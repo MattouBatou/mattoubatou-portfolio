@@ -1,5 +1,5 @@
 {
-	"name": "react-boilerplate",
+	"name": "mattoubatou-portfolio",
 	"version": "0.0.1",
 	"description": "React Boilerplate Template",
 	"main": "index.js",
@@ -11,14 +11,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lewislong/mattoubatou-portfolio.git"
+		"url": "git+https://github.com/mattoubatou/mattoubatou-portfolio.git"
 	},
 	"author": "Matthew Lewis",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/lewislong/mattoubatou-portfolio/issues"
+		"url": "https://github.com/mattoubatou/mattoubatou-portfolio/issues"
 	},
-	"homepage": "https://github.com/lewislong/mattoubatou-portfolio#readme",
+	"homepage": "https://mattoubatou.github.io/mattoubatou-portfolio/build",
 	"dependencies": {
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
