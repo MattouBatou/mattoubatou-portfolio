@@ -15,7 +15,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.js',
-		publicPath: isDevelopment ? '/' : '/mattoubatou-portfolio/build/'
+		publicPath: '/'
 	},
 	devServer: {
 		static: path.resolve(__dirname, 'build'),
