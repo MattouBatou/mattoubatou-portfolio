@@ -1,8 +1,20 @@
 .app-footer {
-    flex: 1;
+    display: flex;
     background-color: $color-theme-background;
-    color: $color-theme-secondary-dark;
-    padding: 0 0.5em;
     font-weight: bold;
-    height:20px;
+    text-transform: lowercase;
+    align-items: center;
+    height: $layout-header-height-sm;
+
+    @include mq($from: xs, $until: lg) {
+        padding: 12px;
+    }
+
+    @include mq($from: lg, $until: inf) {
+        padding: 24px;
+    }
+
+    h5 {
+        margin: 0;
+    }
 }

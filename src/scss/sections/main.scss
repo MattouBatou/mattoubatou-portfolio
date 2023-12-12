@@ -1,0 +1,9 @@
+.app-main {
+    min-height: calc(99vh - #{$layout-header-height-lg} - #{$layout-header-height-sm});
+    padding-top: $layout-padding-lg;
+
+    @include mq($from: xs, $until: lg) {
+        min-height: calc(99vh - #{$layout-header-height-sm} - #{$layout-header-height-sm});
+        padding-top: $layout-padding-sm;
+    }
+}

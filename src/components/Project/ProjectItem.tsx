@@ -16,9 +16,9 @@ export default function (props: projectItemProps) {
 
             <div className="sticky-wrapper">
                 <div className='project-details'>
-                    <div className='project-title'>{itemData.title}</div>
+                    <h2 className='project-title'>{itemData.title}</h2>
                     {(itemData.externalUrl !== null ? (<a href={itemData.externalUrl}>{new URL(itemData.externalUrl).host}</a>) : <></>)}
-                    <div className='project-description'>{itemData.description}</div>
+                    <p className='project-description'>{itemData.description}</p>
                 </div>
             </div>
         </div>

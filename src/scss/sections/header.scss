@@ -16,10 +16,6 @@
         text-decoration: none;
     }
 
-    h1 {
-        color: $color-theme-secondary;
-    }
-
     @include mq($from: xs, $until: lg) {
         height: $layout-header-height-sm;
         padding: 10px 12px;

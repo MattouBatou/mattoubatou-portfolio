@@ -3,30 +3,25 @@
 .project-container {
     .project-item {
         display: grid;
-        //grid-template-columns: 1fr auto;
         grid-template-columns: 6fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 24px;
-        grid-row-gap: 0px;
-        padding-right: 24px;
-        min-height: calc(100vh - #{$layout-header-height-lg});
-        overflow: hidden;
+        grid-column-gap: $layout-padding-sm;
+        grid-row-gap: $layout-padding-sm;
+        margin: $layout-padding-lg;
 
         @include mq($from: xs, $until: lg) {
             grid-template-columns: 1fr;
             padding:0;
-            min-height: calc(100vh - #{$layout-header-height-sm});
         }
 
         .project-content {
             background-color: black;
             border-radius: $layout-border-radius;
-            padding: 24px;
+            padding: 24px 0;
 
             .project-content-iframe {
+                background-color: black;
                 border: 0;
                 overflow: hidden;
-                border-radius: $layout-border-radius;
                 width: 100%;
 
                 @include mq($from: xs, $until: lg) {
@@ -40,8 +35,8 @@
             }
 
             .project-content-image {
+                background-color: black;
                 max-width: 100%;
-                padding: 0 0.5em;
                 display: block;
                 margin: 0 auto;
 
@@ -58,18 +53,22 @@
         .sticky-wrapper {
             @include mq($from: lg, $until: inf) {
                 position: sticky;
-                top: -$layout-header-height-lg;
-                max-height: calc(100vh - #{$layout-header-height-lg});
+                top: $layout-header-height-lg;
+                height: calc(90vh - #{$layout-header-height-lg * 2});
             }
 
             .project-details {
                 text-align: left;
-                background-color: $color-theme-gray;
+                background-color: $color-theme-sections;
                 border-radius: $layout-border-radius;
-                padding: 0.5em;
+                padding: $layout-padding-lg;
 
-                @include mq($from: lg, $until: inf) {
-                    height: 200vh;
+                @include mq($from: xs, $until: lg) {
+                    padding: $layout-padding-sm;
+                }
+                
+                .project-title {
+                    text-transform: lowercase;
                 }
             }
         }

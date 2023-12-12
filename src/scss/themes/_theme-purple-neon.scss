@@ -1,15 +1,16 @@
 @use 'sass:color';
 
 // Theme Colours
-$color-theme-primary: #e7c609 !global;
+//$color-theme-primary: #e7c609 !global;
+$color-theme-primary: #ebdc8a !global;
 $color-theme-secondary: #640cac !global;
 $color-theme-tertiary: #da13ae !global;
 $color-theme-accent: #09e7b0 !global;
 $color-theme-link: #00f0ff !global;
 
-$color-theme-background: darken(desaturate($color-theme-secondary, 50%), 30%);
+$color-theme-background: darken(desaturate($color-theme-secondary, 50%), 26%);
 
-$color-theme-gray: #18151b;
+$color-theme-sections: #281f31;
 
 // Theme Layout
-$layout-border-radius: 5px !global;
+$layout-border-radius: 16px !global;
