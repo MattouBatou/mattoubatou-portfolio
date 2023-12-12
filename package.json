@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "webpack-dev-server --open --hot --mode development",
 		"build": "rm -rf build && webpack --mode production",
+		"deploy": "gh-pages -b main -d build",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"prettier-format-all": "prettier --write **/*.{js,jsx,scss,html}"
 	},
@@ -41,6 +42,7 @@
 		"copy-webpack-plugin": "^10.2.4",
 		"css-loader": "^3.6.0",
 		"file-loader": "^5.1.0",
+		"gh-pages": "^6.1.0",
 		"html-webpack-plugin": "^5.3.1",
 		"node-sass": "^7.0.1",
 		"postcss-loader": "^3.0.0",

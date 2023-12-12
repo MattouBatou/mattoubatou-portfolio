@@ -102,7 +102,9 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new HTMLWebpackPlugin(),
+		new HTMLWebpackPlugin({
+			title: "MattouBatou Games"
+		}),
 		new CopyWebpackPlugin({
 			patterns: [
 				{
