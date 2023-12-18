@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
   } from "react-router-dom";
 
@@ -14,7 +14,7 @@ import "./scss/main.scss";
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="app"></div>';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
       path: "/",
       element: <Root />,

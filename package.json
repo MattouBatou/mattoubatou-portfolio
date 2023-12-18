@@ -4,6 +4,8 @@
 	"description": "MattouBatou Portfolio",
 	"main": "index.js",
 	"scripts": {
+		"predeploy": "npm run build",
+	    "deploy": "gh-pages -d build",
 		"start": "webpack-dev-server --open --hot --mode development",
 		"build": "rm -rf build && webpack --mode production",
 		"test": "echo \"Error: no test specified\" && exit 1",
