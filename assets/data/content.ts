@@ -69,7 +69,7 @@ const educationCity: ContentCollection = {
 
 const novabods: ContentCollection = {
     title: 'Novabods',
-    thumbnail: '/assets/images/content/novabods/content03.png',
+    thumbnail: '/assets/images/content/novabods/content02.png',
     content: {
         title: 'Custom Game Framework DOM + SVG',
         externalUrl: 'https://educationcity.com',
