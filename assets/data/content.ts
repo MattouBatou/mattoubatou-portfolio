@@ -36,19 +36,63 @@ export interface ContentCollection extends ContentCollectionDetails {
 
 const educationCity: ContentCollection = {
     title: 'Education City',
-    thumbnail: '/assets/images/thumbnails/EducationCity01-thumb.png',
+    thumbnail: '/assets/images/content/edcity/content01.png',
     content: {
         title: 'Custom Game Framework DOM + SVG',
         externalUrl: 'https://educationcity.com',
         contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
         description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,
-        content: [{
-            content: '/assets/images/thumbnails/EducationCity01-thumb.png',
-            contentType: ContentType.image,
-        }, {
-            content: '/assets/images/thumbnails/EducationCity01-thumb.png',
-            contentType: ContentType.image
-        }],
+        content: [
+            {
+                content: '/assets/images/content/edcity/content01.png',
+                contentType: ContentType.image,
+            }, 
+            {
+                content: '/assets/images/content/edcity/content02.png',
+                contentType: ContentType.image
+            },
+            {
+                content: '/assets/images/content/edcity/content03.png',
+                contentType: ContentType.image
+            },
+            {
+                content: '/assets/images/content/edcity/content04.png',
+                contentType: ContentType.image
+            },
+            {
+                content: '/assets/images/content/edcity/content05.png',
+                contentType: ContentType.image
+            }
+        ],
+    }
+};
+
+const novabods: ContentCollection = {
+    title: 'Novabods',
+    thumbnail: '/assets/images/content/novabods/content03.png',
+    content: {
+        title: 'Custom Game Framework DOM + SVG',
+        externalUrl: 'https://educationcity.com',
+        contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
+        description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,
+        content: [
+            {
+                content: '/assets/images/content/novabods/content01.png',
+                contentType: ContentType.image,
+            }, 
+            {
+                content: '/assets/images/content/novabods/content02.png',
+                contentType: ContentType.image
+            },
+            {
+                content: '/assets/images/content/novabods/content03.png',
+                contentType: ContentType.image
+            },
+            {
+                content: '/assets/images/content/novabods/content04.png',
+                contentType: ContentType.image
+            }
+        ],
     }
 };
 
@@ -69,7 +113,7 @@ const qmsKnowYourCuts: ContentCollection = {
     },
 }
 
-const AllContent: ContentCollection[] = [ educationCity, qmsKnowYourCuts, educationCity, educationCity, educationCity, educationCity, educationCity, educationCity ];
+const AllContent: ContentCollection[] = [ educationCity, novabods, qmsKnowYourCuts, educationCity, novabods, qmsKnowYourCuts, educationCity, novabods, qmsKnowYourCuts ];
 
 export const getContentCollection: (id: number) => Promise<ContentCollection> = async (id) => {
     const contentCollection = AllContent[id];

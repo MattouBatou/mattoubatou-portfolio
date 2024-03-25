@@ -7,5 +7,7 @@ type projectContentImageProps = {
 export default function (props: projectContentImageProps) {
     const { content } = props;
 
-    return <img className='project-content-image'  src={content}/>;
+    return <div className='project-content-item'>
+            <img className='project-content-image'  src={content}/>
+    </div>;
 };

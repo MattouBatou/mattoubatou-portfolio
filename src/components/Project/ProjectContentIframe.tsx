@@ -7,5 +7,7 @@ type projectContentIframeProps = {
 export default function (props: projectContentIframeProps) {
     const { content } = props;
 
-    return <iframe className='project-content-iframe'  src={content}/>;
+    return <div className='project-content-item'>
+        <iframe className='project-content-iframe'  src={content}/>
+    </div>;
 };

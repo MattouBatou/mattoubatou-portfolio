@@ -12,8 +12,6 @@ export default function (props: projectItemProps) {
 
     return (
         <div className='project-item'>
-            <ProjectContent content={itemData.content}/>
-
             <div className="sticky-wrapper">
                 <div className='project-details'>
                     <h2 className='project-title'>{itemData.title}</h2>
@@ -21,6 +19,8 @@ export default function (props: projectItemProps) {
                     <p className='project-description'>{itemData.description}</p>
                 </div>
             </div>
+            
+            <ProjectContent content={itemData.content}/>
         </div>
     )
 };
