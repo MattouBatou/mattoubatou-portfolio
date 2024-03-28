@@ -3,73 +3,90 @@
 .project-container {
     .project-item {
         display: grid;
-        grid-template-columns: 6fr 1fr;
-        grid-column-gap: $layout-padding-sm;
-        grid-row-gap: $layout-padding-sm;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: $layout-padding-lg;
+        grid-row-gap: $layout-padding-lg;
         margin: $layout-padding-lg;
 
-        @include mq($from: xs, $until: lg) {
+        @include mq($from: xxs, $until: lg) {
             grid-template-columns: 1fr;
             padding:0;
         }
 
         .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: $layout-padding-lg;
+            grid-row-gap: $layout-padding-lg;
+
+            @include mq($from: lg, $until: inf) {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-column-gap: $layout-padding-xxxg;
+                grid-row-gap: $layout-padding-xxxg;
+            }
+
             .project-content-item {
-                border-radius: $layout-border-radius;
                 margin: 0 auto;
-                overflow: hidden;
-
-                @include mq($from: xs, $until: lg) {
-                    margin-bottom: $layout-padding-sm;
-                }
-
-                @include mq($from: lg, $until: inf) {
-                    margin-bottom: $layout-padding-lg;
-                }
-
                 width: 100%;
-                @include mq($from: xs, $until: lg) {
-                    max-height: calc(90vh - #{$layout-header-height-sm}) !important;
+                @include mq($from: xxs, $until: sm) {
+                    grid-column: span 4 !important;
                 }
+                overflow:hidden;
+                border-radius: $layout-border-radius;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                // @include mq($from: xxs, $until: lg) {
+                //     height: calc(90vh - #{$layout-header-height-sm}) !important;
+                // }
 
-                @include mq($from: lg, $until: inf) {
-                    max-height: calc(90vh - #{$layout-header-height-lg}) !important;
-                }
+                // @include mq($from: lg, $until: inf) {
+                //     height: calc(90vh - #{$layout-header-height-lg}) !important;
+                // }
 
                 .project-content-iframe {
                     background-color: black;
                     border: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 100%;                
+                    height: 100%;              
                 }
-    
-                .project-content-image {
+
+                .project-content-image, .project-content-video {
                     background-color: black;
-                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
                     display: block;
                     margin: 0 auto;
+                }
+
+                .project-content-image {
+                    visibility: hidden;
                 }
             }
         }
 
         .sticky-wrapper {
+            min-width: 0;
             @include mq($from: lg, $until: inf) {
                 position: sticky;
                 top: $layout-header-height-lg;
                 height: calc(90vh - #{$layout-header-height-lg * 2});
-                grid-column-start: 2;
+                grid-column-start: 5;
                 grid-row-start: 1;
             }
 
             .project-details {
+                word-wrap: break-word;
                 text-align: left;
                 background-color: $color-theme-sections;
                 border-radius: $layout-border-radius;
                 padding: $layout-padding-lg;
 
-                @include mq($from: xs, $until: lg) {
+                @include mq($from: xxs, $until: lg) {
                     padding: $layout-padding-sm;
+                    text-align: center;
                 }
                 
                 .project-title {

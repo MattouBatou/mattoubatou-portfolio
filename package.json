@@ -4,12 +4,13 @@
 	"description": "MattouBatou Portfolio",
 	"main": "index.js",
 	"scripts": {
-		"predeploy": "rm -rf node_modules/.cache/gh-pages && npm run build && cp CNAME build/",
-	    "deploy": "gh-pages -d build",
 		"start": "webpack-dev-server --open --hot --mode development",
 		"build": "rm -rf build && webpack --mode production",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"prettier-format-all": "prettier --write **/*.{js,jsx,scss,html}"
+		"prettier-format-all": "prettier --write **/*.{js,jsx,scss,html}",
+		"publish": "npm run predeploy && npm run deploy",
+		"predeploy": "rm -rf node_modules/.cache/gh-pages && npm run build && cp CNAME build/",
+	    "deploy": "gh-pages -d build"
 	},
 	"repository": {
 		"type": "git",

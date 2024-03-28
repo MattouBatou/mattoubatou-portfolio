@@ -9,8 +9,8 @@ export default function ContentGridItem({ title, thumbnail, description, collect
 return (
     <Link to={`project/${collectionId}`} className="content-collection content-grid-item">
         <div className="content-collection-details">
-            <h2>{title}</h2>
-            <div className="content-collection-description">{description}</div>
+            <div className="content-collection-details-title">{title}</div>
+            {/* <div className="content-collection-description">{description}</div> */}
         </div>
         <div className="content-collection-thumbnail" style={{backgroundImage: `url(${thumbnail})`}}/>
     </Link>

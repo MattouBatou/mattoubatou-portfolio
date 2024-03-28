@@ -2,45 +2,44 @@
 
 .content-grid {
     display: grid;
-    padding: 0.5em;
-    grid-gap: 5px;
+    padding: $layout-header-height-sm/2;
+    grid-gap: $layout-padding-sm;
 
-    @include mq($from: xs, $until: sm) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    @include mq($from: xs, $until: sm, $and: $mq-landscape) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mq($from: sm, $until: md) {
+    @include mq($from: xxs, $until: md) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @include mq($from: sm, $until: md, $and: $mq-landscape) {
+    @include mq($from: xxs, $until: md, $and: $mq-landscape) {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq($from: md, $until: inf) {
+        grid-gap: $layout-padding-lg;
     }
 
     @include mq($from: md, $until: lg) {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @include mq($from: lg, $until: xl) {
+    @include mq($from: lg, $until: inf) {
         grid-template-columns: repeat(4, 1fr);
     }
 
     @include mq($from: xl, $until: xg) {
-        grid-template-columns: repeat(5, 1fr);
+        //grid-template-columns: repeat(5, 1fr);
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     @include mq($from: xg, $until: xxg) {
-        grid-template-columns: repeat(6, 1fr);
+        // grid-template-columns: repeat(6, 1fr);
+        margin-left: 7.5%;
+        margin-right: 7.5%;
     }
 
-    @include mq($from: xxg, $until: xxxg) {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    @include mq($from: xxxg, $until: inf) {
-        grid-template-columns: repeat(8, 1fr);
+    @include mq($from: xxg, $until: inf) {
+        // grid-template-columns: repeat(8, 1fr);
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .content-grid-item {
@@ -50,34 +49,74 @@
         border-radius: $layout-border-radius;
         color: $color-theme-primary;
         aspect-ratio: 1;
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            padding: 12px;
-            transition: opacity 250ms;
-            opacity: 0;
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(darken($color-theme-background, 5%), 0.54) 26.12%, darken($color-theme-background, 5%) 100%);
-            background-size: 100%;
-            z-index:1;
-        }
     
         .content-collection-details {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 300%;
+                bottom: 0;
+                opacity: 1;
+                //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 85%, rgba(darken($color-theme-background, 5%), 0.8) 90%, darken($color-theme-background, 5%) 100%);
+                //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(darken($color-theme-secondary, 15%), 0.8) 90%, darken($color-theme-secondary, 15%) 100%);
+                background-image: linear-gradient(180deg, rgba($color-theme-secondary, 0) 0%, darken($color-theme-secondary, 15%) 70%, darken($color-theme-secondary, 30%) 100%);
+                background-size: 100%;
+                z-index:0;
+            }
+
+            display: flex;
             position: absolute;
             bottom: 0;
             transition: left 250ms;
-            padding: 12px;
+            padding: $layout-padding-sm 0;
             width: 100%;
             text-transform: lowercase;
             z-index:1;
+            height: 15%;
 
-            h2 {
+            @include mq($from: xxs, $until: md) {  
+                padding: $layout-padding-sm 0;
+            }
+
+            @include mq($from: md, $until: xxg) {  
+                padding: $layout-padding-md 0;
+            }
+
+            @include mq($from: xxg, $until: inf) {  
+                padding: $layout-padding-lg 0;
+            }
+
+            .content-collection-details-title {
+                font-family: 'Major Mono Display', monospace;
                 transition: left 250ms;
+                text-align: center;
                 position: relative;
-                left: -100%;
+                color: $color-theme-primary;
+                margin: 0;
+                font-weight: bold;
+                flex: 1 1 100%;
+                align-content: center;
+
+                @include mq($from: xxs, $until: sm) {                
+                    font-size: 0.8em;
+                }
+                @include mq($from: sm, $until: md) {                
+                    font-size: 1em;
+                }
+                @include mq($from: md, $until: lg) {
+                    font-size: 1.15em;
+                }
+                @include mq($from: lg, $until: xg) {                
+                    font-size: 1.3em;
+                }
+                @include mq($from: xg, $until: xxg) {                
+                    font-size: 1.4em;
+                }
+                @include mq($from: xxg, $until: inf) {                
+                    font-size: 1.5em;
+                }
             }
 
             .content-collection-description {
@@ -86,28 +125,12 @@
                 left: -100%;
             }
         }
-
-        &:hover {
-            cursor: pointer;
-            &::before {
-                opacity: 1;
-            }
-
-            .content-collection-details {
-
-                h2, .content-collection-description {
-                    left: 0;
-                }
-            }
-        }
     }
 
     .content-collection-thumbnail {
         position: relative;
-        width: calc(100% - 8px);
-        height: calc(100% - 8px);
-        left: 4px;
-        top: 4px;
+        width: 100%;
+        height: calc(100% - 1px);
         border-radius: 16px;
         background-size: auto 100%;
         background-repeat: no-repeat;

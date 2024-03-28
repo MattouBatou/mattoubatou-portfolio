@@ -16,12 +16,12 @@
         text-decoration: none;
     }
 
-    @include mq($from: xs, $until: lg) {
+    @include mq($from: xxs, $until: sm) {
         height: $layout-header-height-sm;
         padding: 10px 12px;
     }
 
-    @include mq($from: lg, $until: inf) {
+    @include mq($from: sm, $until: inf) {
         height: $layout-header-height-lg;
         padding: 20px 24px;
     }

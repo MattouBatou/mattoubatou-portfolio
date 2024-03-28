@@ -11,14 +11,15 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-	xs: 0,
-	sm: 768px,
+	xxs: 0,
+	xs: 360px,
+	sm: 720px, 		// 720p
 	md: 992px,
 	lg: 1200px,
 	xl: 1440px,
-	xg: 1920px,
-	xxg: 2560px,
-	xxxg: 3840px,
+	xg: 1920px, 	// 1080p
+	xxg: 2560px, 	// 1440p
+	xxxg: 3840px, 	// 4k
 	inf: 99999px,
 );
 
@@ -28,9 +29,9 @@ $mq-portrait: '(orientation: portrait)';
 // Define the breakpoint from the $mq-breakpoints list that should
 // be used as the target width when outputting a static stylesheet
 // (when $mq-responsive is set to 'false').
-$mq-static-breakpoint: lg;
+$mq-static-breakpoint: xg;
 
 // If you want to display the currently active breakpoint in the top
 // right corner of your site during development, add the breakpoints
 // to this list, ordered by width. For example: (mobile, tablet, desktop).
-$mq-show-breakpoints: (xs, sm, md, lg, xl, xg, xxg, xxxg);
+$mq-show-breakpoints: (xxs, xs, sm, md, lg, xl, xg, xxg, xxxg);
