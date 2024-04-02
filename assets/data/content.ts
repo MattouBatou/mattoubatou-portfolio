@@ -115,7 +115,7 @@ const novabods: ContentCollection = {
 
 const vaccinatorQuest: ContentCollection = {
     title: 'Vaccinator Quest',
-    thumbnail: '/assets/images/thumbnails/vaccinator_quest-thumb.png',
+    thumbnail: '/assets/images/content/vaccinator_quest/thumb.png',
     content: {
         title: 'Vaccintor Quest',
         externalUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
