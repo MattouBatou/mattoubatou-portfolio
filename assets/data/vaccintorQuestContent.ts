@@ -2,7 +2,8 @@ import { ContentCollection, ContentType } from "./content";
 
 const vaccinatorQuest: ContentCollection = {
     title: 'Vaccinator Quest',
-    thumbnail: '/assets/images/content/vaccinator_quest/thumb.png',
+    thumbnail: '/assets/videos/content/vaccinator_quest/vaccinator_quest_thumb.mp4',
+    thumbnailType: ContentType.video,
     content: {
         title: 'Vaccinator Quest',
         externalUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',

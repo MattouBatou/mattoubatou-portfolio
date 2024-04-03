@@ -2,7 +2,8 @@ import { ContentCollection, ContentType } from "./content";
 
 const novabods: ContentCollection = {
     title: 'Novabods',
-    thumbnail: '/assets/images/content/novabods/content02.png',
+    thumbnail: '/assets/videos/content/novabods/video01.mp4',
+    thumbnailType: ContentType.video,
     content: {
         title: 'Novabods',
         externalUrl: 'https://educationcity.com',
@@ -15,8 +16,8 @@ const novabods: ContentCollection = {
                 columns: 1,
             },
             {
-                content: '/assets/images/content/novabods/content01.png',
-                contentType: ContentType.image,
+                content: '/assets/videos/content/novabods/video01.mp4',
+                contentType: ContentType.video,
                 columns: 4
             },
             {
@@ -30,20 +31,20 @@ const novabods: ContentCollection = {
                 columns: 6
             },
             {
+                content: '/assets/images/content/novabods/content01.png',
+                contentType: ContentType.image,
+                columns: 3
+            },
+            {
                 content: '/assets/images/content/novabods/content02.png',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 3
             },
             {
                 content: '/assets/images/content/novabods/content03.png',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 3
             },
-            {
-                content: '/assets/images/content/novabods/content04.png',
-                contentType: ContentType.image,
-                columns: 2
-            }
         ],
     }
 };
