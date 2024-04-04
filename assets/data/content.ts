@@ -47,7 +47,7 @@ import vaccinatorQuest from "./vaccintorQuestContent";
 import qmsKnowYourCuts from "./knowYourCutsContent";
 import qmsFindTheFacts from "./findTheFactsContent";
 
-const AllContent: ContentCollection[] = [ educationCity, bubble_n_squeak, novabods, vaccinatorQuest, qmsKnowYourCuts, qmsFindTheFacts, educationCity, novabods, qmsKnowYourCuts, qmsFindTheFacts ];
+const AllContent: ContentCollection[] = [ educationCity, bubble_n_squeak, novabods, vaccinatorQuest, qmsKnowYourCuts, qmsFindTheFacts ];
 
 export const getContentCollection: (id: number) => Promise<ContentCollection> = async (id) => {
     const contentCollection = AllContent[id];

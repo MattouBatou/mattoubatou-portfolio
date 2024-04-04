@@ -2,7 +2,8 @@ import { ContentCollection, ContentType } from "./content";
 
 const educationCity: ContentCollection = {
     title: 'Education City',
-    thumbnail: '/assets/images/content/edcity/content01.png',
+    thumbnail: '/assets/videos/content/edcity/video01.mp4',
+    thumbnailType: ContentType.video,
     content: {
         title: 'Education City',
         externalUrl: 'https://educationcity.com',
@@ -15,8 +16,8 @@ const educationCity: ContentCollection = {
                 columns: 1,
             },
             {
-                content: '/assets/images/content/edcity/content01.png',
-                contentType: ContentType.image,
+                content: '/assets/videos/content/edcity/video01.mp4',
+                contentType: ContentType.video,
                 columns: 4
             },
             {
@@ -28,6 +29,11 @@ const educationCity: ContentCollection = {
                 content: '',
                 contentType: ContentType.description,
                 columns: 6
+            },
+            {
+                content: '/assets/images/content/edcity/content01.png',
+                contentType: ContentType.image,
+                columns: 2
             },
             {
                 content: '/assets/images/content/edcity/content02.png',
