@@ -2,7 +2,8 @@ import { ContentCollection, ContentType } from "./content";
 
 const qmsFindTheFacts: ContentCollection = {
     title: `Find the Facts`,
-    thumbnail: '/assets/images/content/find_the_facts/thumb01.png',
+    thumbnail: '/assets/videos/content/find_the_facts/video_thumb.mp4',
+    thumbnailType: ContentType.video,
     content: {
         title: 'Find the Facts Game',
         externalUrl: 'https://farmingfoodsteps.co.uk/',
@@ -26,8 +27,8 @@ const qmsFindTheFacts: ContentCollection = {
                 columns: 1
             },
             {
-                content: '/assets/images/content/find_the_facts/content01.png',
-                contentType: ContentType.image,
+                content: '/assets/videos/content/find_the_facts/video01.mp4',
+                contentType: ContentType.video,
                 columns: 4
             },
             {
@@ -39,6 +40,11 @@ const qmsFindTheFacts: ContentCollection = {
                 content: '',
                 contentType: ContentType.description,
                 columns: 6,
+            },
+            {
+                content: '/assets/images/content/find_the_facts/content01.png',
+                contentType: ContentType.image,
+                columns: 2
             },
             {
                 content: '/assets/images/content/find_the_facts/content02.png',
