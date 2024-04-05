@@ -13,22 +13,22 @@ const moneyRain: ContentCollection = {
             {
                 content: '',
                 contentType: ContentType.spacer,
-                columns: 2,
+                columns: 1,
             },
             {
-                content: '/assets/videos/content/old_mout/video_thumb.mp4',
+                content: '/assets/videos/content/old_mout/video01.mp4',
                 contentType: ContentType.video,
                 columns: 2
             },
             {
                 content: '',
-                contentType: ContentType.spacer,
-                columns: 2,
+                contentType: ContentType.description,
+                columns: 2
             },
             {
                 content: '',
-                contentType: ContentType.description,
-                columns: 6
+                contentType: ContentType.spacer,
+                columns: 1,
             },
             {
                 content: '/assets/images/content/old_mout/content01.png',
