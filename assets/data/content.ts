@@ -48,8 +48,9 @@ import qmsKnowYourCuts from "./knowYourCutsContent";
 import qmsFindTheFacts from "./findTheFactsContent";
 import moneyRain from "./moneyRain";
 import oldMout from "./oldMout";
+import saleDiMare from "./saleDiMare";
 
-const AllContent: ContentCollection[] = [ oldMout, vaccinatorQuest, bubble_n_squeak, novabods, moneyRain, educationCity, qmsKnowYourCuts, qmsFindTheFacts ];
+const AllContent: ContentCollection[] = [ saleDiMare, oldMout, vaccinatorQuest, bubble_n_squeak, novabods, moneyRain, educationCity, qmsKnowYourCuts, qmsFindTheFacts ];
 
 export const getContentCollection: (id: number) => Promise<ContentCollection> = async (id) => {
     const contentCollection = AllContent[id];

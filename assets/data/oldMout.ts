@@ -1,6 +1,6 @@
 import { ContentCollection, ContentType } from "./content";
 
-const moneyRain: ContentCollection = {
+const oldMout: ContentCollection = {
     title: 'Old Mout Cider',
     thumbnail: '/assets/videos/content/old_mout/video_thumb.mp4',
     thumbnailType: ContentType.video,
@@ -31,22 +31,42 @@ const moneyRain: ContentCollection = {
                 columns: 1,
             },
             {
-                content: '/assets/images/content/old_mout/content01.png',
-                contentType: ContentType.spacer,
-                columns: 3
+                content: '/assets/images/content/old_mout/content01.jpg',
+                contentType: ContentType.image,
+                columns: 2
             },
             {
-                content: '/assets/images/content/old_mout/content02.png',
-                contentType: ContentType.spacer,
-                columns: 3
+                content: '/assets/images/content/old_mout/content02.jpg',
+                contentType: ContentType.image,
+                columns: 2
             },
             {
-                content: '/assets/images/content/old_mout/content03.png',
+                content: '/assets/images/content/old_mout/content03.jpg',
+                contentType: ContentType.image,
+                columns: 2
+            },
+            {
+                content: '',
                 contentType: ContentType.spacer,
-                columns: 3
+                columns: 1,
+            },
+            {
+                content: '/assets/images/content/old_mout/content04.jpg',
+                contentType: ContentType.image,
+                columns: 2
+            },
+            {
+                content: '/assets/images/content/old_mout/content05.jpg',
+                contentType: ContentType.image,
+                columns: 2
+            },
+            {
+                content: '',
+                contentType: ContentType.spacer,
+                columns: 1,
             },
         ],
     }
 };
 
-export default moneyRain;
+export default oldMout;
