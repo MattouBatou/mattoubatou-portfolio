@@ -5,6 +5,7 @@ const bubble_n_squeak: ContentCollection = {
     thumbnail: '/assets/videos/content/bubble_n_squeak/video01.mp4',
     thumbnailType: ContentType.video,
     thumbAlignLeft: true,
+    thumbnailPoster: '/assets/images/content/bubble_n_squeak/thumbPoster.jpg',
     content: {
         title: "Bubble 'N Squeak",
         externalUrl: 'https://educationcity.com',
@@ -31,6 +32,11 @@ const bubble_n_squeak: ContentCollection = {
                 contentType: ContentType.description,
                 columns: 6
             },
+            {
+                content: '/assets/images/content/bubble_n_squeak/content01.png',
+                contentType: ContentType.image,
+                columns: 6
+            }
         ],
     }
 };

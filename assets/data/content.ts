@@ -34,6 +34,7 @@ export interface ContentCollectionDetails {
     title: string,
     thumbnail: string,
     thumbnailType?: ContentType.image | ContentType.video,
+    thumbnailPoster?: string,
     thumbAlignLeft?: boolean                                // left align thumbnail if true, centered if false. 
 }
 export interface ContentCollection extends ContentCollectionDetails {
@@ -49,8 +50,9 @@ import qmsFindTheFacts from "./findTheFactsContent";
 import moneyRain from "./moneyRain";
 import oldMout from "./oldMout";
 import saleDiMare from "./saleDiMare";
+import cybersphere from "./cybersphere";
 
-const AllContent: ContentCollection[] = [ saleDiMare, oldMout, vaccinatorQuest, bubble_n_squeak, novabods, moneyRain, educationCity, qmsKnowYourCuts, qmsFindTheFacts ];
+const AllContent: ContentCollection[] = [ cybersphere, saleDiMare, oldMout, vaccinatorQuest, bubble_n_squeak, novabods, moneyRain, educationCity, qmsKnowYourCuts, qmsFindTheFacts ];
 
 export const getContentCollection: (id: number) => Promise<ContentCollection> = async (id) => {
     const contentCollection = AllContent[id];

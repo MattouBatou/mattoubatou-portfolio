@@ -2,8 +2,9 @@ import { ContentCollection, ContentType } from "./content";
 
 const moneyRain: ContentCollection = {
     title: 'Money Rain',
-    thumbnail: '/assets/images/content/money_rain/thumb.jpg',
-    thumbnailType: ContentType.image,
+    thumbnail: '/assets/videos/content/money_rain/video_thumb.mp4',
+    thumbnailPoster: '/assets/images/content/money_rain/thumb.jpg',
+    thumbnailType: ContentType.video,
     content: {
         title: 'Money Rain',
         externalUrl: 'https://www.gameaccount.com/',
@@ -17,7 +18,7 @@ const moneyRain: ContentCollection = {
             },
             {
                 content: '/assets/videos/content/money_rain/video01.mp4',
-                contentType: ContentType.spacer,
+                contentType: ContentType.video,
                 columns: 4
             },
             {
@@ -29,21 +30,6 @@ const moneyRain: ContentCollection = {
                 content: '',
                 contentType: ContentType.description,
                 columns: 6
-            },
-            {
-                content: '/assets/images/content/money_rain/content01.png',
-                contentType: ContentType.spacer,
-                columns: 3
-            },
-            {
-                content: '/assets/images/content/money_rain/content02.png',
-                contentType: ContentType.spacer,
-                columns: 3
-            },
-            {
-                content: '/assets/images/content/money_rain/content03.png',
-                contentType: ContentType.spacer,
-                columns: 3
             },
         ],
     }

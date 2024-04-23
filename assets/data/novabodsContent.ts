@@ -4,6 +4,7 @@ const novabods: ContentCollection = {
     title: 'Novabods',
     thumbnail: '/assets/videos/content/novabods/video01.mp4',
     thumbnailType: ContentType.video,
+    thumbnailPoster: '/assets/images/content/novabods/thumbPoster.png',
     content: {
         title: 'Novabods',
         externalUrl: 'https://educationcity.com',
@@ -45,6 +46,11 @@ const novabods: ContentCollection = {
                 contentType: ContentType.image,
                 columns: 3
             },
+            {
+                content: '/assets/images/content/novabods/content04.png',
+                contentType: ContentType.image,
+                columns: 3
+            }
         ],
     }
 };

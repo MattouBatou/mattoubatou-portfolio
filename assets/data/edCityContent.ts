@@ -4,6 +4,7 @@ const educationCity: ContentCollection = {
     title: 'Education City',
     thumbnail: '/assets/videos/content/edcity/video01.mp4',
     thumbnailType: ContentType.video,
+    thumbnailPoster: '/assets/images/content/edcity/thumbPoster.jpg',
     content: {
         title: 'Education City',
         externalUrl: 'https://educationcity.com',

@@ -4,6 +4,7 @@ const vaccinatorQuest: ContentCollection = {
     title: 'Vaccinator Quest',
     thumbnail: '/assets/videos/content/vaccinator_quest/vaccinator_quest_thumb.mp4',
     thumbnailType: ContentType.video,
+    thumbnailPoster: '/assets/images/content/vaccinator_quest/thumbPoster.jpg',
     content: {
         title: 'Vaccinator Quest',
         externalUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
