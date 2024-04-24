@@ -4,6 +4,7 @@ const qmsFindTheFacts: ContentCollection = {
     title: `Find the Facts`,
     thumbnail: '/assets/videos/content/find_the_facts/video_thumb.mp4',
     thumbnailType: ContentType.video,
+    thumbnailPoster: '/assets/images/content/find_the_facts/thumbPoster.jpg',
     content: {
         title: 'Find the Facts Game',
         externalUrl: 'https://farmingfoodsteps.co.uk/',
@@ -12,15 +13,16 @@ const qmsFindTheFacts: ContentCollection = {
         `Made for Quality Meat Scotland's "Find the Facts" educational resources for primary schools.
         Spin the Wheel to answer true or false questions about Scottish meat production.`,
         content: [
-            //     {
-            //     content: '',
-            //     contentType: ContentType.spacer,
-            //     columns: 1
-            // },{
-            //     content: '/assets/videos/content/know_your_cuts/video01.mp4',
-            //     contentType: ContentType.video,
-            //     columns: 2
-            // },
+            {
+                content: '/assets/images/content/find_the_facts/thumbPoster.jpg',
+                contentType: ContentType.image,
+                columns: 2
+            },
+            {
+                content: '',
+                contentType: ContentType.description,
+                columns: 4,
+            },
             {
                 content: '',
                 contentType: ContentType.spacer,
@@ -35,11 +37,6 @@ const qmsFindTheFacts: ContentCollection = {
                 content: '',
                 contentType: ContentType.spacer,
                 columns: 1
-            },
-            {
-                content: '',
-                contentType: ContentType.description,
-                columns: 6,
             },
             {
                 content: '/assets/images/content/find_the_facts/content01.png',
