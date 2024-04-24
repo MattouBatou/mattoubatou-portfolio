@@ -2,11 +2,9 @@ import { ContentCollection, ContentType } from "./content";
 
 const saleDiMare: ContentCollection = {
     title: 'Birra Moretti',
-    thumbnail: '/assets/videos/content/sale_di_mare/video_thumb.mp4',
-    thumbnailType: ContentType.video,
-    thumbnailPoster: '/assets/images/content/sale_di_mare/thumbPoster.jpg',
+    thumbnail: '/assets/images/content/sale_di_mare/thumbPoster.jpg',
     content: {
-        title: 'Birra Moretti: Sale Di Mare Game',
+        title: 'Birra Moretti: Sale Di Mare',
         externalUrl: 'https://www.birramoretti.com/gb/en/ape-game',
         contentUrl: 'https://sdm.birra-moretti.com/index.html',
         description: `Game developed for Birra Moretti for a new lager ad campaign, working through Hoopla Digital.`,
