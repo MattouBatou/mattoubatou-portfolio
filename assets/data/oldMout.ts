@@ -2,9 +2,7 @@ import { ContentCollection, ContentType } from "./content";
 
 const oldMout: ContentCollection = {
     title: 'Old Mout Cider',
-    thumbnail: '/assets/videos/content/old_mout/video_thumb.mp4',
-    thumbnailType: ContentType.video,
-    thumbnailPoster: 'assets/images/content/old_mout/thumbPoster.jpg',
+    thumbnail: 'assets/images/content/old_mout/thumbPoster.jpg',
     content: {
         title: 'Old Mout Cider',
         externalUrl: 'https://www.oldmoutcider.co.uk/',

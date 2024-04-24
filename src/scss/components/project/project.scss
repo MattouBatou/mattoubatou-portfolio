@@ -21,6 +21,7 @@
                 margin: 0 auto;
                 width: 100%;
                 max-height: 80vh;
+
                 @include mq($from: xxs, $until: sm) {
                     grid-column: span 6 !important;
 
@@ -28,12 +29,12 @@
                         display:none;
                     }
                 }
+
                 overflow:hidden;
                 border-radius: $layout-border-radius;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-color: black;
                 
                 &.spacer {
                     background-color: transparent;
@@ -58,7 +59,7 @@
                 .project-details {
                     word-wrap: break-word;
                     text-align: center;
-                    background-color: $color-theme-sections;
+                    background-color: transparent;
                     border-radius: $layout-border-radius;
                     padding: $layout-padding-lg;
                     height:100%;

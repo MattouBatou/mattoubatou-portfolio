@@ -32,10 +32,7 @@ export interface ContentItem {
 // A collection of content under one category, usually a company I did work for.
 export interface ContentCollectionDetails {
     title: string,
-    thumbnail: string,
-    thumbnailType?: ContentType.image | ContentType.video,
-    thumbnailPoster?: string,
-    thumbAlignLeft?: boolean                                // left align thumbnail if true, centered if false. 
+    thumbnail: string, // path to a thumbnail image asset.
 }
 export interface ContentCollection extends ContentCollectionDetails {
     content: ContentItem

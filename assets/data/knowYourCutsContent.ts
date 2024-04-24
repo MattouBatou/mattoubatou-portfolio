@@ -2,11 +2,9 @@ import { ContentCollection, ContentType } from "./content";
 
 const qmsKnowYourCuts: ContentCollection = {
     title: `Know Your Cuts`,
-    thumbnail: '/assets/videos/content/know_your_cuts/video01.mp4',
-    thumbnailType: ContentType.video,
-    thumbnailPoster: '/assets/images/content/know_your_cuts/thumbPoster.jpg',
+    thumbnail: '/assets/images/content/know_your_cuts/thumbPoster.jpg',
     content: {
-        title: 'Know Your Cuts Game',
+        title: 'Know Your Cuts',
         externalUrl: 'https://farmingfoodsteps.co.uk/',
         contentUrl: 'https://farmingfoodsteps.co.uk/lesson-five/game',
         description: 

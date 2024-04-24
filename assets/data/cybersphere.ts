@@ -2,9 +2,7 @@ import { ContentCollection, ContentType } from "./content";
 
 const cybersphere: ContentCollection = {
     title: 'Cybersphere',
-    thumbnail: '/assets/videos/content/cybersphere/videoThumb.gif',
-    thumbnailPoster: '/assets/images/content/cybersphere/thumbPoster.png',
-    thumbnailType: ContentType.image,
+    thumbnail: '/assets/images/content/cybersphere/thumbPoster.png',
     content: {
         title: 'Cybersphere',
         externalUrl: 'https://play.date',

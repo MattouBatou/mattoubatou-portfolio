@@ -2,9 +2,7 @@ import { ContentCollection, ContentType } from "./content";
 
 const moneyRain: ContentCollection = {
     title: 'Money Rain',
-    thumbnail: '/assets/videos/content/money_rain/video_thumb.mp4',
-    thumbnailPoster: '/assets/images/content/money_rain/thumb.jpg',
-    thumbnailType: ContentType.video,
+    thumbnail: '/assets/images/content/money_rain/thumb.jpg',
     content: {
         title: 'Money Rain',
         externalUrl: 'https://www.gameaccount.com/',

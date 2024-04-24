@@ -1,11 +1,14 @@
-$layout-border-radius: 24px !default;
-$layout-padding-xxxg: 28px !default;
-$layout-padding-xxg: 24px !default;
-$layout-padding-xg: 20px !default;
-$layout-padding-lg: 16px !default;
-$layout-padding-md: 12px !default;
-$layout-padding-sm: 8px !default;
-$layout-padding-xs: 4px !default;
+$layout-border-radius: 16px !default;
+
+// padding
+$layout-padding-base: 6px !default;
+$layout-padding-xxxg: $layout-padding-base * 7 !default;
+$layout-padding-xxg: $layout-padding-base * 6 !default;
+$layout-padding-xg: $layout-padding-base * 5 !default;
+$layout-padding-lg: $layout-padding-base * 4 !default;
+$layout-padding-md: $layout-padding-base * 3 !default;
+$layout-padding-sm: $layout-padding-base * 2 !default;
+$layout-padding-xs: $layout-padding-base !default;
 
 $layout-header-height-sm: 40px !default;
 $layout-header-height-lg: 80px !default;

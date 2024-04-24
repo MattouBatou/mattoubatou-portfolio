@@ -2,10 +2,7 @@ import { ContentCollection, ContentType } from "./content";
 
 const bubble_n_squeak: ContentCollection = {
     title: "Bubble 'N Squeak",
-    thumbnail: '/assets/videos/content/bubble_n_squeak/video01.mp4',
-    thumbnailType: ContentType.video,
-    thumbAlignLeft: true,
-    thumbnailPoster: '/assets/images/content/bubble_n_squeak/thumbPoster.jpg',
+    thumbnail: '/assets/images/content/bubble_n_squeak/thumbPoster.jpg',
     content: {
         title: "Bubble 'N Squeak",
         externalUrl: 'https://educationcity.com',

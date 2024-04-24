@@ -37,117 +37,32 @@
         position: relative;
         background-clip: padding-box;
         overflow: hidden;
-        border-radius: $layout-border-radius;
+        width: 100%;
+        height: 100%;
         color: $color-theme-primary;
         aspect-ratio: 1;
 
-        .content-collection-details-blurred {
-            border-radius: 0 0 $layout-border-radius $layout-border-radius;
-            display: block;
-            position: absolute;
+        .content-collection-thumbnail {
+            transition: background-size 250ms, border-radius 250ms, transform 250ms;
+            position: relative;
             width: 100%;
-            height: 20%;
-            bottom: 0;
-            opacity: 1;
-            background-size: auto 500%;
+            height: 100%;
+            border-radius: $layout-border-radius;
+            background-size: auto 100%;
             background-repeat: no-repeat;
-            background-position: bottom;
-            filter: blur(0.1rem);
-            z-index:1;
-        }
+            background-position: center;
+            transform: scale(0);
 
-        .content-collection-details {
-            border-radius: 0 0 $layout-border-radius $layout-border-radius;
-            //display: flex;
-            display: none;
-            position: absolute;
-            bottom: 0;
-            transition: left 250ms;
-            padding: $layout-padding-sm 0;
-            width: 100%;
-            text-transform: lowercase;
-            z-index:1;
-            height: 20%;
-            background-color: rgba(darken($color-theme-secondary, 15%), 0.8);
-
-            @include mq($from: xxs, $until: md) {
-                padding: $layout-padding-sm 0;
-            }
-
-            @include mq($from: md, $until: xxg) {  
-                padding: $layout-padding-md 0;
-            }
-
-            @include mq($from: xxg, $until: inf) {  
-                padding: $layout-padding-lg 0;
-            }
-
-            .content-collection-details-title {
-                font-family: 'cubano', monospace;
-                font-weight: 400;
-                text-align: center;
-                position: relative;
-                color: $color-theme-link;
-                margin: 0;
-                font-weight: bold;
-                flex: 1 1 100%;
-                align-content: center;
-
-                @include mq($from: xxs, $until: xs) {                
-                    font-size: 1.3rem;
-                }
-                @include mq($from: xs, $until: sm) {                
-                    font-size: 1.1rem;
-                }
-                @include mq($from: sm, $until: md) {                
-                    font-size: 1.5rem;
-                }
-                @include mq($from: md, $until: lg) {
-                    font-size: 1.65rem;
-                }
-                @include mq($from: lg, $until: xg) {                
-                    font-size: 1.8rem;
-                }
-                @include mq($from: xg, $until: xxg) {                
-                    font-size: 1.9rem;
-                }
-                @include mq($from: xxg, $until: inf) {                
-                    font-size: 2rem;
-                }
+            &.hovering {
+                background-size: auto 110%;
+                border-radius: $layout-border-radius/4;
             }
         }
-    }
-
-    .content-collection-poster {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        visibility: visible;
-        pointer-events: none;
-        position: absolute;
 
         &.active {
-            visibility: hidden;
+            .content-collection-thumbnail {
+                transform: scale(1);
+            }
         }
-    }
-
-    .content-collection-thumbnail {
-        border-radius: $layout-border-radius;
-        position: absolute;
-        width: 100%;
-        height: calc(100% - 1px);
-        border-radius: 16px;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .content-collection-thumbnail-video {
-        position: absolute;
-        background-color: black;
-        height: 100%;
-        display: block;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
