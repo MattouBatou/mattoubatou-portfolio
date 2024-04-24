@@ -1,12 +1,12 @@
 .app-footer {
     display: flex;
-    position: sticky;
-    bottom: -1px;
     background-color: $color-theme-background;
     font-weight: bold;
     text-transform: lowercase;
+    align-self: end;
     align-items: center;
     height: $layout-header-height-sm;
+    z-index: 999;
 
     @include mq($from: xxs, $until: lg) {
         padding: 12px;

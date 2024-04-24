@@ -2,48 +2,42 @@
 
 .project-container {
     .project-item {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: $layout-padding-lg;
-        grid-row-gap: $layout-padding-lg;
-        margin: $layout-padding-lg;
-
-        @include mq($from: xxs, $until: lg) {
-            grid-template-columns: 1fr;
-            padding:0;
-        }
-
         .project-content {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(6, 1fr);
             grid-column-gap: $layout-padding-lg;
             grid-row-gap: $layout-padding-lg;
+            padding:$layout-padding-sm;
+            max-width: mq-get-breakpoint-width(lg);
+            margin: 0 auto;
 
-            @include mq($from: lg, $until: inf) {
-                grid-column-start: 1;
-                grid-column-end: 5;
+            @include mq($from: sm, $until: inf) {
                 grid-column-gap: $layout-padding-xxxg;
                 grid-row-gap: $layout-padding-xxxg;
+                padding:$layout-padding-lg;
             }
 
             .project-content-item {
                 margin: 0 auto;
                 width: 100%;
+                max-height: 80vh;
                 @include mq($from: xxs, $until: sm) {
-                    grid-column: span 4 !important;
+                    grid-column: span 6 !important;
+
+                    &.spacer {
+                        display:none;
+                    }
                 }
                 overflow:hidden;
                 border-radius: $layout-border-radius;
-                background-size: cover;
+                background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                // @include mq($from: xxs, $until: lg) {
-                //     height: calc(90vh - #{$layout-header-height-sm}) !important;
-                // }
-
-                // @include mq($from: lg, $until: inf) {
-                //     height: calc(90vh - #{$layout-header-height-lg}) !important;
-                // }
+                background-color: black;
+                
+                &.spacer {
+                    background-color: transparent;
+                }
 
                 .project-content-iframe {
                     background-color: black;
@@ -60,39 +54,25 @@
                     display: block;
                     margin: 0 auto;
                 }
-
-                .project-content-image {
-                    visibility: hidden;
-                }
-            }
-        }
-
-        .sticky-wrapper {
-            min-width: 0;
-            @include mq($from: lg, $until: inf) {
-                position: sticky;
-                top: $layout-header-height-lg;
-                height: calc(90vh - #{$layout-header-height-lg * 2});
-                grid-column-start: 5;
-                grid-row-start: 1;
-            }
-
-            .project-details {
-                word-wrap: break-word;
-                text-align: left;
-                background-color: $color-theme-sections;
-                border-radius: $layout-border-radius;
-                padding: $layout-padding-lg;
-
-                @include mq($from: xxs, $until: lg) {
-                    padding: $layout-padding-sm;
-                    text-align: center;
-                }
                 
-                .project-title {
-                    text-transform: lowercase;
+                .project-details {
+                    word-wrap: break-word;
+                    text-align: center;
+                    background-color: $color-theme-sections;
+                    border-radius: $layout-border-radius;
+                    padding: $layout-padding-lg;
+                    height:100%;
+    
+                    @include mq($from: xxs, $until: lg) {
+                        padding: $layout-padding-sm;
+                    }
+                    
+                    .project-title {
+                        text-transform: lowercase;
+                    }
                 }
             }
         }
+        
     }
 }

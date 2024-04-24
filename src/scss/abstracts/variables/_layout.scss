@@ -9,3 +9,9 @@ $layout-padding-xs: 4px !default;
 
 $layout-header-height-sm: 40px !default;
 $layout-header-height-lg: 80px !default;
+
+$layout-content-area-max-width: 1200px !default;
+
+:root {
+    --blurred-thumbnail: '';
+}

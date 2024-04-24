@@ -18,6 +18,11 @@ module.exports = {
 		publicPath: '/'
 	},
 	devServer: {
+		client: {
+			overlay: {
+				runtimeErrors: false
+			},
+		},
 		static: path.resolve(__dirname, 'build'),
 		compress: false,
 		port: 9000,

@@ -10,7 +10,7 @@
 		"prettier-format-all": "prettier --write **/*.{js,jsx,scss,html}",
 		"publish": "npm run predeploy && npm run deploy",
 		"predeploy": "rm -rf node_modules/.cache/gh-pages && npm run build && cp CNAME build/",
-	    "deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build"
 	},
 	"repository": {
 		"type": "git",
@@ -44,6 +44,7 @@
 		"copy-webpack-plugin": "^10.2.4",
 		"css-loader": "^3.6.0",
 		"file-loader": "^5.1.0",
+		"gh-pages": "^6.1.1",
 		"html-webpack-plugin": "^5.3.1",
 		"node-sass": "^7.0.1",
 		"postcss-loader": "^3.0.0",

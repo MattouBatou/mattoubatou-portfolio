@@ -29,14 +29,52 @@ body {
 	width: 100%;
 	background-color: $color-theme-background;
 	color: $color-theme-primary;
-	font-family: 'Barlow', sans-serif;
-	font-weight: 200;
+	font-family: 'adelle', serif;
+	font-weight: 300;
 	font-size: 16px;
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: 'Major Mono Display', monospace;
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'cubano', monospace;
+	font-weight: 400;
+}
+
+h1 {
 	color: $color-theme-tertiary;
+}
+
+h2, h3, h4, h5, h6 {
+	color: $color-theme-accent;
+}
+
+@include mq($from: xxs, $until: xs) {
+	h1 {
+		font-size: 2.125rem;
+	}
+
+	h2 {
+		font-size: 1.17rem;
+	}
+}
+
+@include mq($from: md, $until: xg) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 1.875rem;
+	}
+}
+
+@include mq($from: xg, $until: inf) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.125rem;
+	}
 }
 
 /**

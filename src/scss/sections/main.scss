@@ -1,9 +1,23 @@
 .app-main {
-    min-height: calc(99vh - #{$layout-header-height-lg} - #{$layout-header-height-sm});
+    min-height: calc(99vh - #{$layout-header-height-lg} - #{$layout-header-height-lg});
     padding-top: $layout-padding-lg;
 
-    @include mq($from: xxs, $until: lg) {
+    @include mq($from: xxs, $until: md) {
         min-height: calc(99vh - #{$layout-header-height-sm} - #{$layout-header-height-sm});
         padding-top: $layout-padding-sm;
+    }
+
+    .app-section-title {
+       text-align: center;
+       text-transform: lowercase;
+       color: $color-theme-primary;
+       max-width: $layout-content-area-max-width;
+       margin-left: auto; // set left and right margin individually to maintain the default <hX> element y margins;
+       margin-right: auto;
+       padding-left: $layout-padding-lg;
+
+       @include mq($from: xxs, $until: md) {
+        padding-left: $layout-padding-sm;
+       }
     }
 }

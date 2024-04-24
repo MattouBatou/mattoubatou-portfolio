@@ -2,21 +2,19 @@
 
 .content-grid {
     display: grid;
-    padding: $layout-header-height-sm/2;
+    padding: $layout-padding-sm;
     grid-gap: $layout-padding-sm;
+    max-width: mq-get-breakpoint-width(lg);
+    margin: 0 auto;
 
-    @include mq($from: xxs, $until: md) {
+    // universal
+    @include mq($from: xxs, $until: xs) {
+        grid-template-columns: 1fr;
+    }
+    @include mq($from: xs, $until: sm) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @include mq($from: xxs, $until: md, $and: $mq-landscape) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mq($from: md, $until: inf) {
-        grid-gap: $layout-padding-lg;
-    }
-
-    @include mq($from: md, $until: lg) {
+    @include mq($from: sm, $until: lg) {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -24,49 +22,44 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    @include mq($from: xl, $until: xg) {
-        //grid-template-columns: repeat(5, 1fr);
-        margin-left: 5%;
-        margin-right: 5%;
+    // Mobile only
+    @include mq($from: xxs, $until: md, $and: $mq-landscape) {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    @include mq($from: xg, $until: xxg) {
-        // grid-template-columns: repeat(6, 1fr);
-        margin-left: 7.5%;
-        margin-right: 7.5%;
-    }
-
-    @include mq($from: xxg, $until: inf) {
-        // grid-template-columns: repeat(8, 1fr);
-        margin-left: 10%;
-        margin-right: 10%;
+    @include mq($from: md, $until: inf) {
+        padding: $layout-padding-lg;
+        grid-gap: $layout-padding-lg;
     }
 
     .content-grid-item {
+        cursor: pointer;
         position: relative;
         background-clip: padding-box;
         overflow: hidden;
         border-radius: $layout-border-radius;
         color: $color-theme-primary;
         aspect-ratio: 1;
-    
-        .content-collection-details {
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 300%;
-                bottom: 0;
-                opacity: 1;
-                //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 85%, rgba(darken($color-theme-background, 5%), 0.8) 90%, darken($color-theme-background, 5%) 100%);
-                //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(darken($color-theme-secondary, 15%), 0.8) 90%, darken($color-theme-secondary, 15%) 100%);
-                background-image: linear-gradient(180deg, rgba($color-theme-secondary, 0) 0%, darken($color-theme-secondary, 15%) 70%, darken($color-theme-secondary, 30%) 100%);
-                background-size: 100%;
-                z-index:0;
-            }
 
-            display: flex;
+        .content-collection-details-blurred {
+            border-radius: 0 0 $layout-border-radius $layout-border-radius;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            bottom: 0;
+            opacity: 1;
+            background-size: auto 500%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            filter: blur(0.1rem);
+            z-index:1;
+        }
+
+        .content-collection-details {
+            border-radius: 0 0 $layout-border-radius $layout-border-radius;
+            //display: flex;
+            display: none;
             position: absolute;
             bottom: 0;
             transition: left 250ms;
@@ -74,9 +67,10 @@
             width: 100%;
             text-transform: lowercase;
             z-index:1;
-            height: 15%;
+            height: 20%;
+            background-color: rgba(darken($color-theme-secondary, 15%), 0.8);
 
-            @include mq($from: xxs, $until: md) {  
+            @include mq($from: xxs, $until: md) {
                 padding: $layout-padding-sm 0;
             }
 
@@ -89,51 +83,71 @@
             }
 
             .content-collection-details-title {
-                font-family: 'Major Mono Display', monospace;
-                transition: left 250ms;
+                font-family: 'cubano', monospace;
+                font-weight: 400;
                 text-align: center;
                 position: relative;
-                color: $color-theme-primary;
+                color: $color-theme-link;
                 margin: 0;
                 font-weight: bold;
                 flex: 1 1 100%;
                 align-content: center;
 
-                @include mq($from: xxs, $until: sm) {                
-                    font-size: 0.8em;
+                @include mq($from: xxs, $until: xs) {                
+                    font-size: 1.3rem;
+                }
+                @include mq($from: xs, $until: sm) {                
+                    font-size: 1.1rem;
                 }
                 @include mq($from: sm, $until: md) {                
-                    font-size: 1em;
+                    font-size: 1.5rem;
                 }
                 @include mq($from: md, $until: lg) {
-                    font-size: 1.15em;
+                    font-size: 1.65rem;
                 }
                 @include mq($from: lg, $until: xg) {                
-                    font-size: 1.3em;
+                    font-size: 1.8rem;
                 }
                 @include mq($from: xg, $until: xxg) {                
-                    font-size: 1.4em;
+                    font-size: 1.9rem;
                 }
                 @include mq($from: xxg, $until: inf) {                
-                    font-size: 1.5em;
+                    font-size: 2rem;
                 }
-            }
-
-            .content-collection-description {
-                transition: left 250ms;
-                position: relative;
-                left: -100%;
             }
         }
     }
 
+    .content-collection-poster {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        visibility: visible;
+        pointer-events: none;
+        position: absolute;
+
+        &.active {
+            visibility: hidden;
+        }
+    }
+
     .content-collection-thumbnail {
-        position: relative;
+        border-radius: $layout-border-radius;
+        position: absolute;
         width: 100%;
         height: calc(100% - 1px);
         border-radius: 16px;
         background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    .content-collection-thumbnail-video {
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
