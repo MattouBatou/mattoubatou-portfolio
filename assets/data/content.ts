@@ -3,14 +3,16 @@ export enum ContentType {
     image,
     iframe,
     video,
-    description
+    description,
+    text
 };
 
 export type ContentSchema = {
     content: string,
     contentType: ContentType,
     columns?: number,
-    rows?: number
+    rows?: number,
+    square?: boolean
 };
 
 export type ContentBundle = ContentSchema[];
