@@ -23,7 +23,7 @@ export default function () {
 
     return (
         <div className="project-container">
-            <ProjectItem itemData={project.content}/>
+            <ProjectItem itemData={project.content} thumbnail={project.thumbnail}/>
         </div>
     )
 };

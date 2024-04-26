@@ -10,44 +10,29 @@ const novabods: ContentCollection = {
         description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,
         content: [
             {
-                content: '',
-                contentType: ContentType.spacer,
-                columns: 1,
-            },
-            {
                 content: '/assets/videos/content/novabods/video01.mp4',
                 contentType: ContentType.video,
                 columns: 4
             },
             {
-                content: '',
-                contentType: ContentType.spacer,
-                columns: 1,
-            },
-            {
-                content: '',
-                contentType: ContentType.description,
-                columns: 6
-            },
-            {
                 content: '/assets/images/content/novabods/content01.png',
                 contentType: ContentType.image,
-                columns: 3
+                columns: 4
             },
             {
                 content: '/assets/images/content/novabods/content02.png',
                 contentType: ContentType.image,
-                columns: 3
+                columns: 4
             },
             {
                 content: '/assets/images/content/novabods/content03.png',
                 contentType: ContentType.image,
-                columns: 3
+                columns: 4
             },
             {
                 content: '/assets/images/content/novabods/content04.png',
                 contentType: ContentType.image,
-                columns: 3
+                columns: 4
             }
         ],
     }

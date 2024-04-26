@@ -1,26 +1,28 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { PAGE_TITLE_PORTFOLIO, PATH_NAME_PORTFOLIO } from 'constants/constants';
 
 import Header from 'components/Header';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
-import GlobalContext, { GlobalContext_t } from 'context/GlobalContext';
+import AppContext, { AppContext_t } from 'context/AppContext';
 
 export default function () {
 
     const [state, setState] = useState({});
 
-    const updateState = (newState: Partial<GlobalContext_t>) => {
+    const updateState = useCallback((newState: Partial<AppContext_t>) => {
         setState({ ...state, ...newState });
-    };
+    }, [state, setState]);
+
+    const getContextValue = useCallback(() => ({ updateState, ...state }), [state, updateState]);
 
     return (
-        <div className="app-container">
-            <Header/>
-            <GlobalContext.Provider value={{...state, updateState}}>
+        <AppContext.Provider value={getContextValue()}>
+            <div className="app-container">
+                <Header/>
                 <Main />
-            </GlobalContext.Provider>
-            <Footer/>
-        </div>
+                <Footer/>
+            </div>
+        </AppContext.Provider>
     )
 };

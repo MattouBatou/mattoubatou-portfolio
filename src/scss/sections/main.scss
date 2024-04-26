@@ -1,23 +1,65 @@
 .app-main {
-    min-height: calc(99vh - #{$layout-header-height-lg} - #{$layout-header-height-lg});
-    padding-top: $layout-padding-lg;
+    min-height: calc(99vh - #{$layout-header-height-lg});
+    //padding-top: $layout-padding-lg;
 
     @include mq($from: xxs, $until: md) {
-        min-height: calc(99vh - #{$layout-header-height-sm} - #{$layout-header-height-sm});
-        padding-top: $layout-padding-sm;
+        min-height: calc(99vh - #{$layout-header-height-sm});
+       //padding-top: $layout-padding-sm;
     }
 
-    .app-section-title {
-       text-align: center;
-       text-transform: lowercase;
-       color: $color-theme-primary;
-       max-width: $layout-content-area-max-width;
-       margin-left: auto; // set left and right margin individually to maintain the default <hX> element y margins;
-       margin-right: auto;
-       padding-left: $layout-padding-lg;
+    .app-section-title-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 12px;
+        padding: 12px;
+        max-width: 1200px;
+        margin: 0 auto;
 
-       @include mq($from: xxs, $until: md) {
-        padding-left: $layout-padding-sm;
-       }
+        .app-section-title-project-thumbnail {
+            align-self: center;
+            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+            border-radius: $layout-border-radius/3;
+            grid-column: span 2;
+
+            @include mq($from: sm, $until: inf) {
+                grid-column: span 1;
+            }
+
+            img {
+                background-color: black;
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .app-section-title {
+            text-align: center;
+            text-transform: lowercase;
+            color: $color-theme-primary;
+            max-width: $layout-content-area-max-width;
+            margin-left: auto; // set left and right margin individually to maintain the default <hX> element y margins;
+            margin-right: auto;
+            padding-left: $layout-padding-lg;
+            grid-column: span 12;
+     
+            &.project-title {
+                 grid-column: span 10;
+
+                 @include mq($from: sm, $until: inf) {
+                    grid-column: span 11;
+                }
+
+                 text-align: left;
+                 margin: 0;
+            }
+     
+            @include mq($from: xxs, $until: md) {
+                 padding-left: $layout-padding-sm;
+            }
+         }
     }
 }

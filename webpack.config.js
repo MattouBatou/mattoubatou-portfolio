@@ -108,7 +108,11 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HTMLWebpackPlugin({
-			title: "MattouBatou Games"
+			title: "MattouBatou Games",
+			meta: {
+				author: 'Matthew Lewis',
+				viewport: 'width=device-width, initial-scale=1, user-scalable=no'
+			},
 		}),
 		new CopyWebpackPlugin({
 			patterns: [

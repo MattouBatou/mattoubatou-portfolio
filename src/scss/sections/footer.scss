@@ -9,11 +9,11 @@
     z-index: 999;
 
     @include mq($from: xxs, $until: lg) {
-        padding: 12px;
+        padding-left: 12px;
     }
 
     @include mq($from: lg, $until: inf) {
-        padding: 24px;
+        padding-left: 24px;
     }
 
     h5 {

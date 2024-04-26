@@ -10,29 +10,14 @@ const bubble_n_squeak: ContentCollection = {
         description: `Standalone game made for the childrens home eLearning app, 'Novabods'.`,
         content: [
             {
-                content: '',
-                contentType: ContentType.spacer,
-                columns: 1,
-            },
-            {
                 content: '/assets/videos/content/bubble_n_squeak/video01.mp4',
                 contentType: ContentType.video,
                 columns: 4
             },
             {
-                content: '',
-                contentType: ContentType.spacer,
-                columns: 1,
-            },
-            {
-                content: '',
-                contentType: ContentType.description,
-                columns: 6
-            },
-            {
                 content: '/assets/images/content/bubble_n_squeak/content01.png',
                 contentType: ContentType.image,
-                columns: 6
+                columns: 4
             }
         ],
     }

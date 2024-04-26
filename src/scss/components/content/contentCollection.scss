@@ -6,6 +6,8 @@
     grid-gap: $layout-padding-sm;
     max-width: mq-get-breakpoint-width(lg);
     margin: 0 auto;
+    grid-column: span 12;
+    width: 100%;
 
     // universal
     @include mq($from: xxs, $until: xs) {
@@ -14,17 +16,17 @@
     @include mq($from: xs, $until: sm) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @include mq($from: sm, $until: lg) {
+    @include mq($from: sm, $until: md) {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @include mq($from: lg, $until: inf) {
+    @include mq($from: md, $until: inf) {
         grid-template-columns: repeat(4, 1fr);
     }
 
     // Mobile only
     @include mq($from: xxs, $until: md, $and: $mq-landscape) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     @include mq($from: md, $until: inf) {
@@ -36,14 +38,14 @@
         cursor: pointer;
         position: relative;
         background-clip: padding-box;
-        overflow: hidden;
+        
         width: 100%;
         height: 100%;
         color: $color-theme-primary;
         aspect-ratio: 1;
 
         .content-collection-thumbnail {
-            transition: background-size 250ms, border-radius 250ms, transform 250ms;
+            transition: background-size 250ms ease-out, border-radius 250ms ease-in, transform 250ms ease-out;
             position: relative;
             width: 100%;
             height: 100%;
