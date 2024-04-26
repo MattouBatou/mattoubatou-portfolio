@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const educationCity: ContentCollection = {
     title: 'Education City',
     thumbnail: '/assets/images/content/edcity/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('01-07-2014'), end: new Date('01-04-2017')}
+    },
     content: {
-        title: 'Education City',
         externalUrl: 'https://educationcity.com',
         contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
         description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,

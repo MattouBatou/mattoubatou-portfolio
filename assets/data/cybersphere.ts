@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const cybersphere: ContentCollection = {
     title: "Beat 'em up Game Engine",
     thumbnail: '/assets/images/content/cybersphere/thumbPoster.png',
+    stats: {
+        dateRange: { start: new Date('01-01-2023'), end: null}
+    },
     content: {
-        title: "Beat 'em up Game Engine",
         externalUrl: 'https://play.date',
         contentUrl: '',
         description: `Beat em up game engine for the Playdate handheld console.`,

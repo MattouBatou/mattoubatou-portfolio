@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const bubble_n_squeak: ContentCollection = {
     title: "Bubble 'N Squeak",
     thumbnail: '/assets/images/content/bubble_n_squeak/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('01-10-2016'), end: new Date('01-011-2016')}
+    },
     content: {
-        title: "Bubble 'N Squeak",
         externalUrl: 'https://educationcity.com',
         contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
         description: `Standalone game made for the childrens home eLearning app, 'Novabods'.`,

@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const qmsFindTheFacts: ContentCollection = {
     title: `Find the Facts`,
     thumbnail: '/assets/images/content/find_the_facts/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('01-07-2020'), end: new Date('01-07-2020')}
+    },
     content: {
-        title: 'Find the Facts',
         externalUrl: 'https://farmingfoodsteps.co.uk/',
         contentUrl: 'https://farmingfoodsteps.co.uk/lesson-one/game',
         description: 
