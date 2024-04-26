@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const vaccinatorQuest: ContentCollection = {
     title: 'Vaccinator Quest',
     thumbnail: '/assets/images/content/vaccinator_quest/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('03-01-2020'), end: new Date('04-01-2020')}
+    },
     content: {
-        title: 'Vaccinator Quest',
         externalUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
         contentUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
         description: `Description`,

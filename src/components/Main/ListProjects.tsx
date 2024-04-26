@@ -16,6 +16,7 @@ export default function renderContentCollections(props: ListProjectsProps) {
                 key={collection.title+collectionIndex}
                 title={collection.title}
                 thumbnail={collection.thumbnail}
+                stats={collection.stats}
                 collectionId={collectionIndex}
             />
         );

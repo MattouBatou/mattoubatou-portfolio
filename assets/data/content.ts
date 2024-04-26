@@ -22,7 +22,6 @@ export type ContentBundle = ContentSchema[];
 // @url: a link to the original content or an article about that content.
 // @content: content will be asset urls. These could be images, gifs, videos, or links to external content intended to be loaded in an iFrame or <object>.
 export interface ContentItem {
-    title: string,
     externalUrl: string | null,
     contentUrl?: string | null,
     // tags: string[] - e.g. `js, svg, dom api, eLearning, game, drag n drop`
@@ -30,12 +29,17 @@ export interface ContentItem {
     content: ContentBundle
 };
 
+export interface ContentStats {
+    dateRange: {start: Date, end: Date | null},
+};
+
 // ContentCollection
 // A collection of content under one category, usually a company I did work for.
 export interface ContentCollectionDetails {
     title: string,
     thumbnail: string, // path to a thumbnail image asset.
-}
+    stats: ContentStats,
+};
 export interface ContentCollection extends ContentCollectionDetails {
     content: ContentItem
 };
@@ -63,5 +67,7 @@ export const getContentCollection: (id: number) => Promise<ContentCollection> = 
         }
     });
 }
+
+console.log(saleDiMare);
 
 export default AllContent;

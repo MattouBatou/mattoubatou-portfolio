@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const oldMout: ContentCollection = {
     title: 'Old Mout Cider',
     thumbnail: 'assets/images/content/old_mout/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('11-01-2023'), end: new Date('12-01-2023')}
+    },
     content: {
-        title: 'Old Mout Cider',
         externalUrl: 'https://www.oldmoutcider.co.uk/',
         contentUrl: 'https://hoopladigital.co.uk/hooplay/',
         description: `Game developed for Old Mout Cider working through Hoopla Digital.`,

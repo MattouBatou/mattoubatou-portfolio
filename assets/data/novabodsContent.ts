@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const novabods: ContentCollection = {
     title: 'Novabods',
     thumbnail: '/assets/images/content/novabods/thumbPoster.png',
+    stats: {
+        dateRange: { start: new Date('01-01-2016'), end: new Date('01-04-2017')}
+    },
     content: {
-        title: 'Novabods',
         externalUrl: 'https://educationcity.com',
         contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
         description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,

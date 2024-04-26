@@ -3,8 +3,10 @@ import { ContentCollection, ContentType } from "./content";
 const qmsKnowYourCuts: ContentCollection = {
     title: `Know Your Cuts`,
     thumbnail: '/assets/images/content/know_your_cuts/thumbPoster.jpg',
+    stats: {
+        dateRange: { start: new Date('01-06-2020'), end: new Date('01-06-2020')}
+    },
     content: {
-        title: 'Know Your Cuts',
         externalUrl: 'https://farmingfoodsteps.co.uk/',
         contentUrl: 'https://farmingfoodsteps.co.uk/lesson-five/game',
         description: 

@@ -1,0 +1,1 @@
+export const monthFormatter = new Intl.DateTimeFormat('default', { month: 'short' });

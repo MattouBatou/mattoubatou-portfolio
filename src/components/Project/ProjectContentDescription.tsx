@@ -6,7 +6,7 @@ type projectContentDescriptionProps = {
 }
 
 export default function (props: projectContentDescriptionProps) {
-    const { title, externalUrl, contentUrl, description } = props.content;
+    const { externalUrl, contentUrl, description } = props.content;
 
     const externalUrlObj = externalUrl !== null ? new URL(externalUrl) : null;
     const contentUrlObj = contentUrl && contentUrl !== null ? new URL(contentUrl) : null;

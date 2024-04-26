@@ -10,20 +10,20 @@ type projectParams = {
 
 export async function loader({ params }: any): Promise<ContentCollection> {
     const typedParams = params as unknown as projectParams;
-    const project = await getContentCollection(typedParams.contentId);
-    return project;
+    const projectContent = await getContentCollection(typedParams.contentId);
+    return projectContent;
 }
 
 export default function () {
-    const project = useLoaderData() as ContentCollection;
+    const projectContent = useLoaderData() as ContentCollection;
 
-    if(!project) {
+    if(!projectContent) {
         return <></>;
     }
 
     return (
         <div className="project-container">
-            <ProjectItem itemData={project.content} thumbnail={project.thumbnail}/>
+            <ProjectItem contentCollection={projectContent}/>
         </div>
     )
 };
