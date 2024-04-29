@@ -7,6 +7,60 @@ export enum ContentType {
     text
 };
 
+export enum WorkType {
+    freelance = 'Freelance',
+    fullTime = 'Full-time',
+    MattouBatou = 'MattouBatou'
+};
+
+export enum Skills {
+    // programming
+    cLang = 'C',
+    playdate = 'Playdate SDK',
+    js = 'JS',
+    ts = 'TypeScript',
+    html = 'HTML5',
+    css = 'CSS',
+    react = 'React',
+    angular = 'Angular',
+    jquery = 'jQuery',
+    pixi = 'PixiJS',
+    phaser = 'Phaser',
+    easel = 'EaselJS',
+    construct = 'Construct 3',
+    cMake = 'CMake',
+    shell = 'Shell Scripts',
+    webpack = 'Webpack',
+    mocha = 'Mocha',
+    chai = 'Chai',
+    canvas = 'Canvas',
+    // planning
+    jira = 'Jira',
+    confluence = 'Confluence',
+    trello = 'Trello',
+    hacknplan = "Hack 'N Plan",
+    // graphics
+    svg = 'SVG',
+    tiled = 'Tiled',
+    texturePacker = 'Texture Packer',
+    aseprite = 'Aseprite',
+    photoshop = 'Photoshop',
+    illustrator = 'Illustrator',
+    animate = 'Animate/Flash',
+    inkScape = 'inkScape'
+};
+
+export enum SkillTypes {
+    programming = 'programming',
+    planning = 'planning',
+    graphics = 'graphics',
+};
+
+export type SkillObject = {
+    skill: Skills,
+    skillType: SkillTypes
+};
+
 export type ContentSchema = {
     content: string,
     contentType: ContentType,
@@ -31,6 +85,8 @@ export interface ContentItem {
 
 export interface ContentStats {
     dateRange: {start: Date, end: Date | null},
+    workType: WorkType,
+    skills?: SkillObject[]
 };
 
 // ContentCollection
@@ -68,6 +124,19 @@ export const getContentCollection: (id: number) => Promise<ContentCollection> = 
     });
 }
 
-console.log(saleDiMare);
+AllContent.sort((a,b) => {
+    const aEnd = a.stats.dateRange.end;
+    const bEnd = b.stats.dateRange.end;
+
+    if(aEnd && bEnd) {
+        return aEnd > bEnd ? -1 : 1;
+    } else if(aEnd == null && bEnd !== null) {
+        return -1;
+    } else if(aEnd !== null && bEnd === null) {
+        return 1;
+    }
+
+    return 0;
+});
 
 export default AllContent;

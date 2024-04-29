@@ -1,10 +1,13 @@
-import { ContentCollection, ContentType } from "./content";
+import skills from "constants/skills";
+import { ContentCollection, ContentType, WorkType } from "./content";
 
 const qmsKnowYourCuts: ContentCollection = {
     title: `Know Your Cuts`,
     thumbnail: '/assets/images/content/know_your_cuts/thumbPoster.jpg',
     stats: {
-        dateRange: { start: new Date('01-06-2020'), end: new Date('01-06-2020')}
+        dateRange: { start: new Date('01-06-2020'), end: new Date('01-06-2020')},
+        workType: WorkType.freelance,
+        skills: [skills.js, skills.easel, skills.html, skills.css, skills.trello, skills.texturePacker, skills.photoshop, skills.animate]
     },
     content: {
         externalUrl: 'https://farmingfoodsteps.co.uk/',

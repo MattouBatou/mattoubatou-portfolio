@@ -1,10 +1,16 @@
-import { ContentCollection, ContentType } from "./content";
+import skills from "constants/skills";
+import { ContentCollection, ContentType, WorkType } from "./content";
 
 const novabods: ContentCollection = {
     title: 'Novabods',
     thumbnail: '/assets/images/content/novabods/thumbPoster.png',
     stats: {
-        dateRange: { start: new Date('01-01-2016'), end: new Date('01-04-2017')}
+        dateRange: { start: new Date('01-01-2016'), end: new Date('01-04-2017')},
+        workType: WorkType.fullTime,
+        skills: [
+                skills.js, skills.phaser, skills.pixi, skills.easel, skills.html, skills.css, skills.canvas, skills.jquery, skills.angular, skills.webpack, 
+                skills.trello, skills.jira, skills.confluence, 
+                skills.svg, skills.texturePacker, skills.photoshop, skills.illustrator, skills.inkScape]
     },
     content: {
         externalUrl: 'https://educationcity.com',
