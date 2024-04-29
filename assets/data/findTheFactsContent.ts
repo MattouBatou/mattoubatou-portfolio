@@ -1,10 +1,13 @@
-import { ContentCollection, ContentType } from "./content";
+import skills from "constants/skills";
+import { ContentCollection, ContentType, WorkType } from "./content";
 
 const qmsFindTheFacts: ContentCollection = {
     title: `Find the Facts`,
     thumbnail: '/assets/images/content/find_the_facts/thumbPoster.jpg',
     stats: {
-        dateRange: { start: new Date('01-07-2020'), end: new Date('01-07-2020')}
+        dateRange: { start: new Date('01-07-2020'), end: new Date('01-07-2020')},
+        workType: WorkType.freelance,
+        skills: [skills.js, skills.construct, skills.html, skills.css, skills.trello, skills.texturePacker, skills.photoshop]
     },
     content: {
         externalUrl: 'https://farmingfoodsteps.co.uk/',

@@ -1,10 +1,16 @@
-import { ContentCollection, ContentType } from "./content";
+import skills from "constants/skills";
+import { ContentCollection, ContentType, WorkType } from "./content";
 
 const bubble_n_squeak: ContentCollection = {
     title: "Bubble 'N Squeak",
     thumbnail: '/assets/images/content/bubble_n_squeak/thumbPoster.jpg',
     stats: {
-        dateRange: { start: new Date('01-10-2016'), end: new Date('01-011-2016')}
+        dateRange: { start: new Date('01-10-2016'), end: new Date('01-011-2016')},
+        workType: WorkType.fullTime,
+        skills: [
+            skills.js, skills.phaser, skills.html, skills.css, skills.canvas, skills.jquery, skills.webpack, 
+            skills.trello, skills.jira, skills.confluence, 
+            skills.texturePacker, skills.photoshop]
     },
     content: {
         externalUrl: 'https://educationcity.com',

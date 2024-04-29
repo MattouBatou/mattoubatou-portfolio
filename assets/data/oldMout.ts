@@ -1,10 +1,13 @@
-import { ContentCollection, ContentType } from "./content";
+import skills from "constants/skills";
+import { ContentCollection, ContentType, WorkType } from "./content";
 
 const oldMout: ContentCollection = {
     title: 'Old Mout Cider',
     thumbnail: 'assets/images/content/old_mout/thumbPoster.jpg',
     stats: {
-        dateRange: { start: new Date('11-01-2023'), end: new Date('12-01-2023')}
+        dateRange: { start: new Date('11-01-2023'), end: new Date('12-01-2023')},
+        workType: WorkType.freelance,
+        skills: [skills.ts, skills.phaser, skills.html, skills.css, skills.webpack, skills.trello, skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
         externalUrl: 'https://www.oldmoutcider.co.uk/',

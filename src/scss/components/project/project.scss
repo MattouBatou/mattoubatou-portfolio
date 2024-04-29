@@ -8,7 +8,6 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-gap: $layout-padding-sm;
-            max-width: mq-get-breakpoint-width(lg);
             margin: 0 auto;
 
             // @include mq($from: sm, $until: inf) {
@@ -45,28 +44,66 @@
                     grid-column: span 12;
                 }
 
-                &.project-content-item-dates {
-                    grid-column: span 2;
+                &.project-content-item-stats {
+                    grid-column: span 3;
                     //text-wrap: nowrap;
                     text-align: center;
                     font-family: 'cubano';
-                    color: $color-theme-tertiary;
-                    font-size: 1.5rem;
+                    color: $color-theme-primary;
+                    font-size: 1rem;
                     background-color: $color-theme-sections;
                     border-radius: $layout-border-radius;
                     padding: $layout-padding-lg/2;
                     height:100%;
-    
+
+                    // padding
                     @include mq($from: xxs, $until: lg) {
                         padding: $layout-padding-sm/2;
                     }
 
-                    // font sizes
+                    // grid spans
                     @include mq($from: xxs, $until: sm) {
-                        grid-column: span 4 !important;
+                        grid-column: span 6 !important;
                     }
+                    @include mq($from: sm, $until: lg) {
+                        grid-column: span 3 !important;
+                    }
+                    @include mq($from: lg, $until: inf) {
+                        grid-column: span 2 !important;
+                    }
+
+                    // font sizes
                     @include mq($from: xxs, $until: md) {
                         font-size: 1rem;
+                    }
+
+                    &.project-content-item-skills {
+                        display: flex;
+                        flex-flow: row;
+                        flex-wrap: wrap;
+                        grid-column: span 12 !important;
+                        background-color: transparent;
+                        padding: 0;
+
+                        .skill-tag {
+                            font-size: 0.7rem !important;
+                            line-height: 0.7rem;
+                            color: white;
+                            background-color: white;
+                            border-radius: 9999px;
+                            padding: 4px 6px;
+                            margin: 2px;
+
+                            &.skill-tag-programming {
+                                background-color: $color-theme-skill-programming;
+                            }
+                            &.skill-tag-planning {
+                                background-color: $color-theme-skill-planning;
+                            }
+                            &.skill-tag-graphics {
+                                background-color: $color-theme-skill-graphics;
+                            }
+                        }
                     }
                 }
 
@@ -89,14 +126,14 @@
                 .project-details {
                     word-wrap: break-word;
                     text-align: left;
-                    background-color: $color-theme-sections;
+                    background-color: transparent;
                     //background-color: transparent;
                     border-radius: $layout-border-radius;
-                    padding: $layout-padding-lg;
+                    padding: $layout-padding-lg $layout-padding-lg/2;
                     height:100%;
     
                     @include mq($from: xxs, $until: lg) {
-                        padding: $layout-padding-sm;
+                        padding: $layout-padding-sm $layout-padding-sm/2;
                     }
                     
                     .project-title {

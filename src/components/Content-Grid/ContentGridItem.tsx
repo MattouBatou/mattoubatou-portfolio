@@ -26,7 +26,7 @@ export default function ContentGridItem({
     useEffect(() => {
         setTimeout(() => {
             setActive(true);
-        }, 100 * collectionId);
+        }, 80 * collectionId);
     }, []);
 
     return (

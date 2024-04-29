@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { ContentCollection } from 'assets/data/content';
+import React, { ReactElement, ReactNode, useContext, useEffect } from 'react';
+import { ContentCollection, SkillObject, WorkType } from 'assets/data/content';
 
 import ProjectContentItem from './ProjectContentItem';
 import AppContext from 'context/AppContext';
@@ -13,20 +13,35 @@ type projectContentProps = {
 export default function (props: projectContentProps) {
     const { contentCollection } = props;
     const { title, thumbnail, stats, content: projectContent} = contentCollection;
-    const { dateRange } = stats;
+    const { dateRange, workType, skills } = stats;
     const { externalUrl, contentUrl, description, content } = projectContent;
 
     const descriptionContent = { externalUrl, contentUrl, description };
 
     const globalContext = useContext(AppContext);
 
-    const startDate = `${monthFormatter.format(dateRange.start)} ${dateRange.start.getFullYear().toString()}`;
-    const endDate = dateRange.end === null ? 'now' : `${monthFormatter.format(dateRange.end)} ${dateRange.end.getFullYear().toString()}`;
     const startYear = dateRange.start.getFullYear().toString();
     const endYear = dateRange.end === null ? 'now' : dateRange.end.getFullYear().toString();
     const presentationDate = startYear === endYear ? startYear : `${startYear} - ${endYear}`
 
+    const renderSkills = () => {
+        console.log(stats);
+        if(skills) {
+            console.log(skills);
+            const nodes: ReactNode[] = [];
+            for(let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
+                const skill: SkillObject = skills[skillIndex];
+                if(skill) {
+                    if(!skill.skillType) console.log(skill);
+                    nodes.push(<div className={`skill-tag skill-tag-${skill.skillType}`}>{skill.skill}</div>);
+                }
+            }
 
+            return <div className={`project-content-item project-content-item-stats project-content-item-skills`}>{nodes}</div>
+        }
+
+        return <></>;
+    };
 
     useEffect(() => {
         globalContext.updateState({pageTitle: title, projectThumbnail: thumbnail})
@@ -34,7 +49,9 @@ export default function (props: projectContentProps) {
 
     return (
         <div className='project-content'>
-            <div className={`project-content-item project-content-item-dates`}>{presentationDate}</div>
+            <div className={`project-content-item project-content-item-stats project-content-item-dates`}>{presentationDate}</div>
+            <div className={`project-content-item project-content-item-stats project-content-item-workType`}>{workType}</div>
+            {renderSkills()}
             <div className={`project-content-item project-content-item-description full-height`}><ProjectContentDescription content={descriptionContent}/></div>
             {
                 content.map((item, i) => {

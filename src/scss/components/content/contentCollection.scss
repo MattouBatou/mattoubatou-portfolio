@@ -44,8 +44,10 @@
         color: $color-theme-primary;
         aspect-ratio: 1;
 
+        --anim-delay: 150ms;
+
         .content-collection-thumbnail {
-            transition: background-size 250ms ease-out, border-radius 250ms ease-in, transform 250ms ease-out;
+            transition: background-size var(--anim-delay) ease-out, border-radius var(--anim-delay) ease-in, transform var(--anim-delay) ease-out;
             position: relative;
             width: 100%;
             height: 100%;

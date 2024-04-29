@@ -1,10 +1,13 @@
-import { ContentCollection, ContentType } from "./content";
+import { ContentCollection, ContentType, WorkType } from "./content";
+import skills from "constants/skills";
 
 const saleDiMare: ContentCollection = {
     title: 'Birra Moretti',
     thumbnail: '/assets/images/content/sale_di_mare/thumbPoster.jpg',
     stats: {
-        dateRange: { start: new Date('01-01-2024'), end: new Date('02-01-2024')}
+        dateRange: { start: new Date('01-01-2024'), end: new Date('02-01-2024')},
+        workType: WorkType.freelance,
+        skills: [skills.ts, skills.phaser, skills.html, skills.css, skills.webpack, skills.trello, skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
         externalUrl: 'https://www.birramoretti.com/gb/en/ape-game',
