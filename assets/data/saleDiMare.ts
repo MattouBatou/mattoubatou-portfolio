@@ -10,15 +10,21 @@ const saleDiMare: ContentCollection = {
         skills: [skills.ts, skills.phaser, skills.html, skills.css, skills.webpack, skills.trello, skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
-        externalUrl: 'https://www.birramoretti.com/gb/en/ape-game',
-        contentUrl: 'https://sdm.birra-moretti.com/index.html',
+        externalUrl: {
+            url: 'https://www.birramoretti.com/gb/en/ape-game',
+        },
+        contentUrl: {
+            url: 'https://sdm.birra-moretti.com/index.html',
+            name: 'Play!'
+        },
         description: `Game developed for Birra Moretti for a new lager ad campaign, working through Hoopla Digital.`,
         content: [
             // Main video content with project description
             {
                 content: '/assets/videos/content/sale_di_mare/video01.mp4',
                 contentType: ContentType.video,
-                columns: 2
+                columns: 2,
+                portrait: true
             },
             // Images content
             //// Portrait
@@ -26,26 +32,31 @@ const saleDiMare: ContentCollection = {
                 content: '/assets/images/content/sale_di_mare/portrait/content1.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content2.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content3.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content5.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content6.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             //// Landscape
             // row 1

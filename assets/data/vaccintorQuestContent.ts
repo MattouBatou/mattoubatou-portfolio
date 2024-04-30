@@ -10,8 +10,10 @@ const vaccinatorQuest: ContentCollection = {
         skills: [skills.js, skills.construct, skills.html, skills.css, skills.jquery, skills.trello, skills.texturePacker, skills.photoshop]
     },
     content: {
-        externalUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
-        contentUrl: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
+        externalUrl: { 
+            url: 'https://www.one.org/stories/vaccinator-quest-game-gavi/',
+            name: 'Game Article'
+        },
         description: `Description`,
         content: [
             {

@@ -90,6 +90,11 @@ a {
 	}
 }
 
+p {
+	white-space: pre;
+	text-wrap: pretty;
+}
+
 .square {
 	aspect-ratio: 1 !important;
 }

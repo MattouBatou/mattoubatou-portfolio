@@ -13,14 +13,27 @@ const moneyRain: ContentCollection = {
             skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
-        externalUrl: 'https://www.gameaccount.com/',
-        contentUrl: 'https://www.gameaccount.com/games/money-rain',
+        externalUrl: {
+            url: 'https://www.gameaccount.com/',
+        },
+        contentUrl: {
+            url: 'https://www.gameaccount.com/games/money-rain',
+            name: 'Game Info',
+        },
         description: `Slot game front-end I developed for Game Account Network (GAN).`,
         content: [
             {
+                contentType: ContentType.spacer,
+                columns: 2,
+            },
+            {
                 content: '/assets/videos/content/money_rain/video01.mp4',
                 contentType: ContentType.video,
-                columns: 4
+                columns: 8
+            },
+            {
+                contentType: ContentType.spacer,
+                columns: 2,
             },
         ],
     }

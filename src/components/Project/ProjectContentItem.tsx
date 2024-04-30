@@ -23,23 +23,23 @@ export default function (props: projectContentItemProps) {
     }
 
     const selectContentType = (item: ContentSchema) => {
-        if(item.contentType === ContentType.iframe) {
-            return <ProjectContentIframe content={item.content} />
-        } else if(item.contentType === ContentType.image) {
-            return <ProjectContentImage content={item.content} /> 
-        } else if(item.contentType === ContentType.video) {
-            return <ProjectContentVideo content={item.content} />
-        } else if(item.contentType === ContentType.text) {
-            return <ProjectContentText content={item.content} />
+        if(item.content) {
+            if(item.contentType === ContentType.iframe) {
+                return <ProjectContentIframe content={item.content} />
+            } else if(item.contentType === ContentType.image) {
+                return <ProjectContentImage content={item.content} /> 
+            } else if(item.contentType === ContentType.video) {
+                return <ProjectContentVideo content={item.content} />
+            } else if(item.contentType === ContentType.text) {
+                return <ProjectContentText content={item.content} />
+            }
         }
     };
 
     const isSpacer = item.contentType === ContentType.spacer ? 'spacer' : '';
 
     return (
-        <div className={`project-content-item ${isSpacer}  
-                        ${item.square ? 'square' : ''}
-                        ${(item.contentType === (ContentType.description | ContentType.text)) ? 'full-height' : ''}`} 
+        <div className={`project-content-item ${isSpacer}  ${item.square ? 'square' : ''} ${item.portrait ? 'portrait' : ''} ${(item.contentType === (ContentType.description | ContentType.text)) ? 'full-height' : ''}`} 
                         style={style}>{selectContentType(item)}</div>
     )
 };

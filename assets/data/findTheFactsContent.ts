@@ -10,8 +10,13 @@ const qmsFindTheFacts: ContentCollection = {
         skills: [skills.js, skills.construct, skills.html, skills.css, skills.trello, skills.texturePacker, skills.photoshop]
     },
     content: {
-        externalUrl: 'https://farmingfoodsteps.co.uk/',
-        contentUrl: 'https://farmingfoodsteps.co.uk/lesson-one/game',
+        externalUrl: {
+            url: 'https://farmingfoodsteps.co.uk/',
+        },
+        contentUrl: {
+            url: 'https://farmingfoodsteps.co.uk/lesson-one/game',
+            name: 'Play!',
+        },
         description: 
         `Made for Quality Meat Scotland's "Find the Facts" educational resources for primary schools.
         Spin the Wheel to answer true or false questions about Scottish meat production.`,

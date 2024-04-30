@@ -25,6 +25,10 @@
                 @include mq($from: xxs, $until: sm) {
                    grid-column: span 12 !important;
 
+                   &.portrait {
+                    grid-column: span 6 !important;
+                   }
+
                     &.spacer {
                         display:none;
                     }
@@ -46,7 +50,7 @@
 
                 &.project-content-item-stats {
                     grid-column: span 3;
-                    //text-wrap: nowrap;
+                    align-content: center;
                     text-align: center;
                     font-family: 'cubano';
                     color: $color-theme-primary;
@@ -75,6 +79,10 @@
                     // font sizes
                     @include mq($from: xxs, $until: md) {
                         font-size: 1rem;
+                    }
+
+                    &.project-content-item-url {
+                        color: $color-theme-link;
                     }
 
                     &.project-content-item-skills {
@@ -144,7 +152,6 @@
                 .project-content-text {
                     word-wrap: break-word;
                     text-align: left;
-                    background-color: $color-theme-sections;
                     border-radius: $layout-border-radius;
                     padding: $layout-padding-lg;
                     width: 100%;

@@ -16,13 +16,14 @@ export default function (props: projectContentProps) {
     const { dateRange, workType, skills } = stats;
     const { externalUrl, contentUrl, description, content } = projectContent;
 
-    const descriptionContent = { externalUrl, contentUrl, description };
-
     const globalContext = useContext(AppContext);
 
     const startYear = dateRange.start.getFullYear().toString();
     const endYear = dateRange.end === null ? 'now' : dateRange.end.getFullYear().toString();
     const presentationDate = startYear === endYear ? startYear : `${startYear} - ${endYear}`
+
+    const externalUrlObj = externalUrl !== null ? new URL(externalUrl.url) : null;
+    const contentUrlObj = contentUrl && contentUrl !== null ? new URL(contentUrl.url) : null;
 
     const renderSkills = () => {
         console.log(stats);
@@ -51,10 +52,12 @@ export default function (props: projectContentProps) {
         <div className='project-content'>
             <div className={`project-content-item project-content-item-stats project-content-item-dates`}>{presentationDate}</div>
             <div className={`project-content-item project-content-item-stats project-content-item-workType`}>{workType}</div>
+            {(externalUrlObj != null ? (<a href={externalUrlObj.href} target={"_blank"} className={`project-content-item project-content-item-stats project-content-item-url`}>{externalUrl.name ? externalUrl.name : externalUrlObj.host.replace('www.', '')}</a>) : <></>)}
+            {(contentUrlObj != null ? (<a href={contentUrlObj.href} target={"_blank"} className={`project-content-item project-content-item-stats project-content-item-url`}>{contentUrl?.name ? contentUrl.name : contentUrlObj.host.replace('www.', '')}</a>) : <></>)}
             {renderSkills()}
-            <div className={`project-content-item project-content-item-description full-height`}><ProjectContentDescription content={descriptionContent}/></div>
+            <div className={`project-content-item project-content-item-description full-height`}><ProjectContentDescription description={description}/></div>
             {
-                content.map((item, i) => {
+                content && content.map((item, i) => {
                     return <ProjectContentItem item={item} index={i} key={`project-content-item_${title}_${i}`}/>
                 })
             }

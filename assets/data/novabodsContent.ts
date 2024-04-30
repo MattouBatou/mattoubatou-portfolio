@@ -13,9 +13,19 @@ const novabods: ContentCollection = {
                 skills.svg, skills.texturePacker, skills.photoshop, skills.illustrator, skills.inkScape]
     },
     content: {
-        externalUrl: 'https://educationcity.com',
-        contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
-        description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,
+        externalUrl: {
+            url: 'https://educationcity.com',
+            name: 'Education City',
+        },
+        contentUrl: {
+            url: 'https://www.educationcity.com/blog/educationcity-invites-you-to-play-novabods/',
+            name: 'App article',
+        },
+        description: 
+`Novabods was a gamified eLearning platform for primary school level children for use at home on mobile and desktop devices.
+
+Novabods is no longer available.
+`,
         content: [
             {
                 content: '/assets/videos/content/novabods/video01.mp4',
