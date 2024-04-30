@@ -22,32 +22,38 @@ const oldMout: ContentCollection = {
             {
                 content: '/assets/videos/content/old_mout/video01.mp4',
                 contentType: ContentType.video,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/old_mout/content01.jpg',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/old_mout/content02.jpg',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/old_mout/content03.jpg',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/old_mout/content04.jpg',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/old_mout/content05.jpg',
                 contentType: ContentType.image,
-                columns: 2
+                columns: 2,
+                portrait: true,
             },
         ],
     }

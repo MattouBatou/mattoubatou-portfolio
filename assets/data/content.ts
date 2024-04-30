@@ -62,11 +62,12 @@ export type SkillObject = {
 };
 
 export type ContentSchema = {
-    content: string,
+    content?: string,
     contentType: ContentType,
     columns?: number,
     rows?: number,
-    square?: boolean
+    square?: boolean,
+    portrait?: boolean
 };
 
 export type ContentBundle = ContentSchema[];

@@ -23,7 +23,8 @@ const saleDiMare: ContentCollection = {
             {
                 content: '/assets/videos/content/sale_di_mare/video01.mp4',
                 contentType: ContentType.video,
-                columns: 2
+                columns: 2,
+                portrait: true
             },
             // Images content
             //// Portrait
@@ -31,26 +32,31 @@ const saleDiMare: ContentCollection = {
                 content: '/assets/images/content/sale_di_mare/portrait/content1.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content2.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content3.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content5.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             {
                 content: '/assets/images/content/sale_di_mare/portrait/content6.jpg',
                 contentType: ContentType.image,
                 columns: 2,
+                portrait: true,
             },
             //// Landscape
             // row 1

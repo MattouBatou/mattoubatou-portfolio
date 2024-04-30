@@ -23,9 +23,17 @@ const moneyRain: ContentCollection = {
         description: `Slot game front-end I developed for Game Account Network (GAN).`,
         content: [
             {
+                contentType: ContentType.spacer,
+                columns: 2,
+            },
+            {
                 content: '/assets/videos/content/money_rain/video01.mp4',
                 contentType: ContentType.video,
-                columns: 4
+                columns: 8
+            },
+            {
+                contentType: ContentType.spacer,
+                columns: 2,
             },
         ],
     }
