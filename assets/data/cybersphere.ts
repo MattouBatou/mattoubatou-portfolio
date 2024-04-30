@@ -12,9 +12,19 @@ const cybersphere: ContentCollection = {
         skills: [C, playdate, js, cMake, shell, hacknplan, tiled, aseprite, texturePacker]
     },
     content: {
-        externalUrl: 'https://play.date',
-        contentUrl: '',
-        description: `Beat em up game engine for the Playdate handheld console.`,
+        externalUrl: {
+            url: 'https://play.date'
+        },
+        description: 
+`Beat 'em up game engine, for the Playdate handheld console, written entirely in the C programming language.
+
+Current engine features include: animated sprites, tilemap loading/rendering, entity spawning/rendering, entity management systems, combat system and efficient collision detection.
+
+Custom exporters for Texture Packer, Tiled and Aseprite have also been developed to help speed up my workflow.
+
+All game content is currently made up of placeholder assets until most of the game engine features are complete.
+Once the main game engine features are complete I will be creating all the art/animations, music/SFX, narrative, writing and game design myself.`,
+
         content: [    
             // Main video
             {

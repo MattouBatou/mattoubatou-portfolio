@@ -10,8 +10,13 @@ const qmsKnowYourCuts: ContentCollection = {
         skills: [skills.js, skills.easel, skills.html, skills.css, skills.trello, skills.texturePacker, skills.photoshop, skills.animate]
     },
     content: {
-        externalUrl: 'https://farmingfoodsteps.co.uk/',
-        contentUrl: 'https://farmingfoodsteps.co.uk/lesson-five/game',
+        externalUrl: {
+            url: 'https://farmingfoodsteps.co.uk/',
+        },
+        contentUrl: {
+            url: 'https://farmingfoodsteps.co.uk/lesson-five/game',
+            name: 'Play!',
+        },
         description: 
         `Made for Quality Meat Scotland's "Farming Foodsteps" educational resources for primary schools.
         Drag and drop game to learn the names of different cuts of meat.`,

@@ -13,8 +13,14 @@ const educationCity: ContentCollection = {
             skills.svg, skills.texturePacker, skills.photoshop, skills.illustrator, skills.inkScape]
     },
     content: {
-        externalUrl: 'https://educationcity.com',
-        contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
+        externalUrl: {
+            url: 'https://educationcity.com',
+            name: 'Education City',
+        },
+        contentUrl: {
+            url: 'https://firstlook.educationcity.com/content/Activity/index/25839',
+            name: 'Game Demo',
+        },
         description: `Drag and drop quiz game framework mixing DOM and SVG for rich user experiences`,
         content: [
             {

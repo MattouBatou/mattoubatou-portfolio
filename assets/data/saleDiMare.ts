@@ -10,8 +10,13 @@ const saleDiMare: ContentCollection = {
         skills: [skills.ts, skills.phaser, skills.html, skills.css, skills.webpack, skills.trello, skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
-        externalUrl: 'https://www.birramoretti.com/gb/en/ape-game',
-        contentUrl: 'https://sdm.birra-moretti.com/index.html',
+        externalUrl: {
+            url: 'https://www.birramoretti.com/gb/en/ape-game',
+        },
+        contentUrl: {
+            url: 'https://sdm.birra-moretti.com/index.html',
+            name: 'Play!'
+        },
         description: `Game developed for Birra Moretti for a new lager ad campaign, working through Hoopla Digital.`,
         content: [
             // Main video content with project description

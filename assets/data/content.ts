@@ -71,13 +71,19 @@ export type ContentSchema = {
 
 export type ContentBundle = ContentSchema[];
 
+export type PrettyURL = {
+    url: string,
+    name?: string
+};
+
 // ContentItem
 // A piece of 'content' describing a single project.
-// @url: a link to the original content or an article about that content.
+// @externalUrl: a link to the client's website to provide context on who the client is.
+// @contentUrl: a link to the original content or an article about that content from the client the game was made for.
 // @content: content will be asset urls. These could be images, gifs, videos, or links to external content intended to be loaded in an iFrame or <object>.
 export interface ContentItem {
-    externalUrl: string | null,
-    contentUrl?: string | null,
+    externalUrl: PrettyURL,
+    contentUrl?: PrettyURL,
     // tags: string[] - e.g. `js, svg, dom api, eLearning, game, drag n drop`
     description: string,
     content: ContentBundle

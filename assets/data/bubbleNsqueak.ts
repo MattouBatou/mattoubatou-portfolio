@@ -13,8 +13,14 @@ const bubble_n_squeak: ContentCollection = {
             skills.texturePacker, skills.photoshop]
     },
     content: {
-        externalUrl: 'https://educationcity.com',
-        contentUrl: 'https://firstlook.educationcity.com/content/Activity/index/25839',
+        externalUrl: {
+            url: 'https://educationcity.com',
+            name: 'Education City',
+        },
+        contentUrl: {
+            url: 'https://firstlook.educationcity.com/content/Activity/index/25839',
+            name: 'Game Demo',
+        },
         description: `Standalone game made for the childrens home eLearning app, 'Novabods'.`,
         content: [
             {

@@ -13,8 +13,13 @@ const moneyRain: ContentCollection = {
             skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
-        externalUrl: 'https://www.gameaccount.com/',
-        contentUrl: 'https://www.gameaccount.com/games/money-rain',
+        externalUrl: {
+            url: 'https://www.gameaccount.com/',
+        },
+        contentUrl: {
+            url: 'https://www.gameaccount.com/games/money-rain',
+            name: 'Game Info',
+        },
         description: `Slot game front-end I developed for Game Account Network (GAN).`,
         content: [
             {

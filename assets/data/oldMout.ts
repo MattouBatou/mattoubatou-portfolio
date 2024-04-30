@@ -10,8 +10,12 @@ const oldMout: ContentCollection = {
         skills: [skills.ts, skills.phaser, skills.html, skills.css, skills.webpack, skills.trello, skills.texturePacker, skills.photoshop, skills.illustrator]
     },
     content: {
-        externalUrl: 'https://www.oldmoutcider.co.uk/',
-        contentUrl: 'https://hoopladigital.co.uk/hooplay/',
+        externalUrl: {
+            url: 'https://www.oldmoutcider.co.uk/',
+        },
+        contentUrl: {
+            url: 'https://hoopladigital.co.uk/hooplay/',
+        },
         description: `Game developed for Old Mout Cider working through Hoopla Digital.`,
         content: [
             // Main Video
