@@ -17,7 +17,7 @@ const saleDiMare: ContentCollection = {
             url: 'https://sdm.birra-moretti.com/index.html',
             name: 'Play!'
         },
-        description: `Game developed for Birra Moretti for a new lager ad campaign, working through Hoopla Digital.`,
+        description: `HTML5 canvas game made with Typescript and Phaser for a marketing campaign for Birra Moretti’s new Lager beveridge launch.`,
         content: [
             // Main video content with project description
             {
@@ -92,6 +92,41 @@ const saleDiMare: ContentCollection = {
                 contentType: ContentType.image,
                 columns: 4
             },
+            {
+                content:
+`The game contains 3 Italian meal recipes that pair well with their new drink. The player selects a recipe and then is tasked with finding the ingredients from a classic Italian Piaggio Ape vehicle, a common vehicle used to sell fresh ingredients in marketplaces across Italy.
+
+Fully responsive to work across mobile devices in both landscape and portrait as well as desktop screens.
+
+Some UI elements change depending on the size of the viewport area to best maximise the space available.
+
+Smooth tween based animations when selecting one of the correct ingredients.
+
+Camera shake when selecting an incorrect ingredient.
+
+Animation to highlight an ingredient that has already been selected.
+
+On mobile devices, pan the game scenes camera with a single finger gesture and pinch to zoom.
+
+Game logic prevents aggressive taps on the screen from initiating a camera pan to prevent user frustration.
+
+Ingredient crates in the Ape vehicle are randomised on each play to keep gameplay fresh.
+
+At randomised intervals, the company mascot appears from behind the Ape vehicle to give a toast to the user.
+
+Share on social media link at the end of the game using the Javascript Share API.
+
+Uses a mixture of PNGs (where transparency is needed) and JPGs to keep file sizes to a minimum while displaying a wide variety of game assets.
+
+Texture packer was used to create texture atlases to reduce the number of http requests for assets to speed up loading times on poor wireless connections.
+
+Assets were received from the client in PSD format and processed by me in Photoshop to create the final production assets.
+On-brand loading screen while assets are downloaded before the game is shown.
+
+I always maintain my own Trello board which is shared with the client from day 1 of development for full project transparency.`,
+                contentType: ContentType.text,
+                columns: 12
+            }
         ],
     }
 };

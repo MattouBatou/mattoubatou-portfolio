@@ -1,3 +1,9 @@
+type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
+  ? Acc[number]
+  : Enumerate<N, [...Acc, Acc['length']]>;
+
+type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>> | T;
+
 export enum ContentType {
     spacer, // adding empty columns
     image,
@@ -64,7 +70,7 @@ export type SkillObject = {
 export type ContentSchema = {
     content?: string,
     contentType: ContentType,
-    columns?: number,
+    columns?: IntRange<1, 12>,
     rows?: number,
     square?: boolean,
     portrait?: boolean

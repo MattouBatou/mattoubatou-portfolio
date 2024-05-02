@@ -20,7 +20,7 @@ const moneyRain: ContentCollection = {
             url: 'https://www.gameaccount.com/games/money-rain',
             name: 'Game Info',
         },
-        description: `Slot game front-end I developed for Game Account Network (GAN).`,
+        description: `HTML5 canvas game developed for Incredible Technologies while working full-time at GAN using Typescript and Pixi.js.`,
         content: [
             {
                 contentType: ContentType.spacer,
@@ -35,6 +35,14 @@ const moneyRain: ContentCollection = {
                 contentType: ContentType.spacer,
                 columns: 2,
             },
+            {
+                content: 
+`Novel slot animations use 3D planes to give the appearance of individual slots “flipping” over to partially reveal potential slot symbols before eventually landing on a slot symbol (using Pixi.js plugin ‘pixi-projection’).
+
+PixiJS Particle-emitter was used for particle effects (coins and money they fly around on a win).`,
+                contentType: ContentType.text,
+                columns: 12,
+            }
         ],
     }
 };
