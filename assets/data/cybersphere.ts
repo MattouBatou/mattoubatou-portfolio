@@ -43,7 +43,7 @@ All game content is currently made up of placeholder assets until most of the ga
 
 Once the main game engine features are complete I will be making a full game, doing all the art/animations, music/SFX, narrative, writing and game design myself.
 
-After I have released a game on the Playdate using this engine, I will port it over to PC, consoles and mobile in full colour, 16:9 aspect ratio and at 2 or 3 times the Playdate's resolution resolution`,
+After I have released a game on the Playdate using this engine, I will port it over to PC, consoles and mobile in full colour, 16:9 aspect ratio and at 2 or 3 times the Playdate's native resolution.`,
                 contentType: ContentType.text,
                 columns: 12
             },
