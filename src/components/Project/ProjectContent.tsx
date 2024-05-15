@@ -26,15 +26,13 @@ export default function (props: projectContentProps) {
     const contentUrlObj = contentUrl && contentUrl !== null ? new URL(contentUrl.url) : null;
 
     const renderSkills = () => {
-        console.log(stats);
         if(skills) {
-            console.log(skills);
             const nodes: ReactNode[] = [];
             for(let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
                 const skill: SkillObject = skills[skillIndex];
                 if(skill) {
                     if(!skill.skillType) console.log(skill);
-                    nodes.push(<div className={`skill-tag skill-tag-${skill.skillType}`}>{skill.skill}</div>);
+                    nodes.push(<div className={`skill-tag skill-tag-${skill.skillType}`} key={`skill-tag-${skill.skillType}-${title}-${skillIndex}`}>{skill.skill}</div>);
                 }
             }
 

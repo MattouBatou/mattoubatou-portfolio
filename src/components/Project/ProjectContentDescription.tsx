@@ -8,7 +8,7 @@ type projectContentDescriptionProps = {
 export default function (props: projectContentDescriptionProps) {
     const { description } = props;
 
-    return <div className='project-details'>
+    return <div className='project-details project-content-text'>
     <p className='project-description'>{description}</p>
 </div>;
 };
