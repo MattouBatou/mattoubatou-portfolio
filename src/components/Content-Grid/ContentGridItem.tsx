@@ -20,7 +20,9 @@ export default function ContentGridItem({
     };
 
     const onItemClick = () => {
-        navigate(`${collectionId}`);
+        setTimeout(() => { 
+            navigate(`${collectionId}`);
+        }, 50);
     };
 
     useEffect(() => {

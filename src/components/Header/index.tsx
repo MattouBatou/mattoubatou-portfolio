@@ -19,7 +19,7 @@ export default function Header() {
             }
             <h2 className="app-title">Matt Lewis <span className="header-title-alt-colour">Games</span></h2>
             <div className="icon-link-container">
-                <a className="icon-link icon-link-cv" href="/#" target="_blank"></a>
+                <a className="icon-link icon-link-cv" href="https://mattoubatou.com/assets/MattLewis_GameDev_CV_2024.pdf" target="_blank"></a>
                 <a className="icon-link icon-link-github" href="https://github.com/MattouBatou" target="_blank"></a>
                 <a className="icon-link icon-link-linkedin" href="https://www.linkedin.com/in/matthew-edward-lewis/" target="_blank"></a>
             </div>

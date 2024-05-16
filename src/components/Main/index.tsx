@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useLocation, useNavigate, useOutlet } from 'react-router-dom';
 import AppContext from 'context/AppContext';
 import { PATH_NAME_PORTFOLIO, PAGE_TITLE_PORTFOLIO } from 'constants/constants';

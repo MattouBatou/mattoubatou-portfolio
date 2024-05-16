@@ -1,5 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
-import { PAGE_TITLE_PORTFOLIO, PATH_NAME_PORTFOLIO } from 'constants/constants';
+import React, { useCallback, useState } from 'react';
 
 import Header from 'components/Header';
 import Main from 'components/Main';
