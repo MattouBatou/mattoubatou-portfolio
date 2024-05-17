@@ -21,31 +21,34 @@ const cybersphere: ContentCollection = {
         content: [    
             // Main video
             {
-                contentType: ContentType.spacer,
-                columns: 3
-            },
-            {
                 content: '/assets/videos/content/cybersphere/video1.gif',
                 contentType: ContentType.image,
                 columns: 6
             },
             {
-                contentType: ContentType.spacer,
+                content: `Current engine features include: animated sprites, tilemap loading tilemap rendering, entity spawning, entity management systems, combat system and efficient collision detection.`,
+                contentType: ContentType.textBox,
                 columns: 3
             },
             {
-                content: 
-`Current engine features include: animated sprites, tilemap loading tilemap rendering, entity spawning, entity management systems, combat system and efficient collision detection.
-
-Custom exporters for Texture Packer, Tiled and Aseprite have also been developed to help speed up my workflow.
-
-All game content is currently made up of placeholder assets until most of the game engine features are complete.
-
-Once the main game engine features are complete I will be making a full game, doing all the art/animations, music/SFX, narrative, writing and game design myself.
-
-After I have released a game on the Playdate using this engine, I will port it over to PC, consoles and mobile in full colour, 16:9 aspect ratio and at 2 or 3 times the Playdate's native resolution.`,
-                contentType: ContentType.text,
-                columns: 12
+                content: `Custom exporters for Texture Packer, Tiled and Aseprite have also been developed to help speed up my workflow.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            {
+                content: `All game content is currently made up of placeholder assets until most of the game engine features are complete.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            {
+                content: `Once the main game engine features are complete I will be making a full game, doing all the art/animations, music/SFX, narrative, writing and game design myself.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            {
+                content: `After I have released a game on the Playdate using this engine, I will port it over to PC, consoles and mobile in full colour, 16:9 aspect ratio and at 2 or 3 times the Playdate's native resolution.`,
+                contentType: ContentType.textBox,
+                columns: 6
             },
         ],
     }

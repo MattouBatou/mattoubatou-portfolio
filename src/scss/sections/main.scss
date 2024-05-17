@@ -7,6 +7,18 @@
        //padding-top: $layout-padding-sm;
     }
 
+    .app-hello {
+        width: 100%;
+        max-width: mq-get-breakpoint-width(md);
+        padding: 0 $layout-padding-lg;
+        text-align: center;
+        margin: auto;
+
+        .app-hello-content {
+            color: $color-theme-primary;
+        }
+    }
+
     .app-section-title-container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);

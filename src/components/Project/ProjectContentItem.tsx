@@ -5,6 +5,7 @@ import ProjectContentIframe from './ProjectContentIframe';
 import ProjectContentImage from './ProjectContentImage';
 import ProjectContentVideo from './ProjectContentVideo';
 import ProjectContentText from './ProjectContentText';
+import ProjectContentTextbox from './ProjectContentTextbox';
 
 type projectContentItemProps = {
     item: ContentSchema,
@@ -32,6 +33,8 @@ export default function (props: projectContentItemProps) {
                 return <ProjectContentVideo content={item.content} />
             } else if(item.contentType === ContentType.text) {
                 return <ProjectContentText content={item.content} />
+            } else if(item.contentType === ContentType.textBox) {
+                return <ProjectContentTextbox content={item.content} />
             }
         }
     };

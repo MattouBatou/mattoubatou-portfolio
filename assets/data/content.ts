@@ -10,7 +10,8 @@ export enum ContentType {
     iframe,
     video,
     description,
-    text
+    text,
+    textBox
 };
 
 export enum WorkType {

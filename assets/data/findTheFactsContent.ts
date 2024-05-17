@@ -53,27 +53,48 @@ Spin the Wheel to answer true or false questions about Scottish meat production.
                 columns: 4
             },
             {
+                contentType: ContentType.spacer,
+                columns: 4
+            },
+            {
                 content: '/assets/images/content/find_the_facts/content06.png',
                 contentType: ContentType.image,
                 columns: 4
             },
             {
-                content:
-`I provided full development services for this game from start to finish.
-
-The game is a True or False questionnaire using a bank of around 20 questions. Questions are selected at random. Each time a question has been selected, it is removed from the bank of questions. Each time the game is replayed, only new questions are shown. When all questions have been viewed, the original bank of questions is reset and all questions can be viewed again.
-
-The “Wheel” in the game shows various question category images in quick succession until it lands on the image corresponding to the selected question’s category.
-
-Some animations were added in the game’s intro sequence to give a sense of fun while the teacher would be explaining the activity to a group of children sitting around either a white board or mobile tablet.
-
-Coding was done using Javascript with Construct 3’s Javascript API and also some visual scripting.
-
-Assets were received from the client in PSD format and processed by me in Photoshop to create the final production assets.
-`,
-                contentType: ContentType.text,
-                columns: 12
-            }
+                contentType: ContentType.spacer,
+                columns: 4
+            },
+            {
+                content: `I provided full development services for this game from start to finish.`,
+                contentType: ContentType.textBox,
+                columns: 2
+            },
+            {
+                content: `The game is a True or False questionnaire using a bank of around 20 questions. Questions are selected at random. Each time a question has been selected, it is removed from the bank of questions. Each time the game is replayed, only new questions are shown. When all questions have been viewed, the original bank of questions is reset and all questions can be viewed again.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `The “Wheel” in the game shows various question category images in quick succession until it lands on the image corresponding to the selected question’s category.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `Coding was done using Javascript with Construct 3’s Javascript API and also some visual scripting.`,
+                contentType: ContentType.textBox,
+                columns: 2
+            },
+            {
+                content: `Some animations were added in the game’s intro sequence to give a sense of fun while the teacher would be explaining the activity to a group of children sitting around either a white board or mobile tablet.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `Assets were received from the client in PSD format and processed by me in Photoshop to create the final production assets.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
     ],
     },
 }

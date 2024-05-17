@@ -26,6 +26,13 @@ export default function Main() {
 
     return(
         <main className="app-main">
+            {(globalContext.pageTitle === PAGE_TITLE_PORTFOLIO) && 
+                <div className='app-hello'>
+                    <h3 className="app-hello-content">
+                        {`Hello. I'm Matt, I make short and fun HTML5 games for eLearning and digital marketing. If you need a game developed and shipped quickly please `}<a href="mailto:mattoubatou@gmail.com" target="_blank">get in touch.</a>
+                    </h3>
+                </div>
+            }
             <div className="app-section-title-container">
                 {((globalContext.projectThumbnail && globalContext.projectThumbnail !== null) ? <div className={`app-section-title-project-thumbnail square`}><ProjectContentImage content={globalContext.projectThumbnail}/></div> : <></>)}
                 <h1 className={`app-section-title ${(globalContext.projectThumbnail !== null) ? 'project-title' : ''}`}>{globalContext.pageTitle}</h1>

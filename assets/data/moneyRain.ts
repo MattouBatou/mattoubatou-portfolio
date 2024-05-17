@@ -36,13 +36,19 @@ const moneyRain: ContentCollection = {
                 columns: 2,
             },
             {
-                content: 
-`Novel slot animations use 3D planes to give the appearance of individual slots “flipping” over to partially reveal potential slot symbols before eventually landing on a slot symbol (using Pixi.js plugin ‘pixi-projection’).
-
-PixiJS Particle-emitter was used for particle effects (coins and money when they fly around on a win).`,
-                contentType: ContentType.text,
-                columns: 12,
-            }
+                contentType: ContentType.spacer,
+                columns: 2,
+            },
+            {
+                content: `Novel slot animations use 3D planes to give the appearance of individual slots “flipping” over to partially reveal potential slot symbols before eventually landing on a slot symbol (using Pixi.js plugin ‘pixi-projection’).`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `PixiJS Particle-emitter was used for particle effects (coins and money when they fly around on a win).`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
         ],
     }
 };
