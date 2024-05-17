@@ -55,27 +55,48 @@ Drag and drop game to learn the names of different cuts of meat.`,
                 columns: 4
             },
             {
+                contentType: ContentType.spacer,
+                columns: 4
+            },
+            {
                 content: '/assets/images/content/know_your_cuts/content06.png',
                 contentType: ContentType.image,
                 columns: 4
             },
             {
-                content:
-`I provided full development services for this game from start to finish.
-
-This game was a ‘rescue project’ that had been abandoned by another contractor and had a super fast turnaround time of ~24 hours development time within 2 days to deliver a playable experience for the client’s campaign launch event.
-
-The game is a drag and drop matching game to help memorise the names and positions of cuts of meat. There are three different animals to choose from with negative and positive feedback during gameplay.
-
-The game came to me as a barely started Adobe Animate project with a few assets placed and no functionality had been coded.
-Since a quick turnaround time was needed and all assets were created within Adobe Animate, I used the HTML5 export option which exports to EaselJS. All coding was done in Javascript within Adobe Animate.
-
-I coded the drag and drop logic (no libraries) to ensure a great, bug free user experience (an often overlooked UI interaction mechanic due to its apparent simplicity).
-
-I always maintain my own Trello board which is shared with the client from day 1 of development for full project transparency.`,
-                contentType: ContentType.text,
-                columns: 12
-            }
+                contentType: ContentType.spacer,
+                columns: 4
+            },
+            {
+                content: `I provided full development services for this game from start to finish.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            {
+                content: `This game was a ‘rescue project’ that had been abandoned by another contractor and had a super fast turnaround time of ~24 hours development time within 2 days to deliver a playable experience for the client’s campaign launch event.`,
+                contentType: ContentType.textBox,
+                columns: 5
+            },
+            {
+                content: `The game is a drag and drop matching game to help memorise the names and positions of cuts of meat. There are three different animals to choose from with negative and positive feedback during gameplay.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `The game came to me as a barely started Adobe Animate project with a few assets placed and no functionality had been coded. Since a quick turnaround time was needed and all assets were created within Adobe Animate, I used the HTML5 export option which exports to EaselJS. All coding was done in Javascript within Adobe Animate.`,
+                contentType: ContentType.textBox,
+                columns: 6
+            },
+            {
+                content: `I coded the drag and drop logic (no libraries) to ensure a great, bug free user experience (an often overlooked UI interaction mechanic due to its apparent simplicity).`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            {
+                content: `I always maintain my own Trello board which is shared with the client from day 1 of development for full project transparency.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
         ],
     },
 }

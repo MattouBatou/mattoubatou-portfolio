@@ -36,6 +36,10 @@ const vaccinatorQuest: ContentCollection = {
                 columns: 4
             },
             {
+                contentType: ContentType.spacer,
+                columns: 2
+            },
+            {
                 content: '/assets/images/content/vaccinator_quest/content03.png',
                 contentType: ContentType.image,
                 columns: 4,
@@ -46,21 +50,34 @@ const vaccinatorQuest: ContentCollection = {
                 columns: 4
             },
             {
-                content:
-`I provided various development and technical consultation services during the development of this game.
-
-I provided the main gameplay logic of scrolling the background, collisions with vehicles and collectible items, spawning of vehicles and collectable items, the boost system which speeds up the car as you collect items, game timer and triggers to pause the gameplay to give multiple choice questions that will alter the gameplay.
-
-I also provided logic and layout for the cutscenes, the multiple choice question system including UI/UX logic and the pause menu with language select and audio muting.
-
-I provided these services using Javascript with Construct 3’s Javascript API and also some visual scripting.
-
-I also provided form integration for linking the game to the petition form and the journey back to the game using url parameters to determine player choices and petition actions.
-
-I also provided the logic for the in game name input including UX logic for iPhone and Android devices to allow a smooth experience with the popup virtual keyboards.`,
-                contentType: ContentType.text,
-                columns: 12
-            }
+                content: `I provided the main gameplay logic of scrolling the background, collisions with vehicles and collectible items, spawning of vehicles and collectable items, the boost system which speeds up the car as you collect items, game timer and triggers to pause the gameplay to give multiple choice questions that will alter the gameplay.`,
+                contentType: ContentType.textBox,
+                columns: 6
+            },
+            
+            {
+                content: `I also provided logic and layout for the cutscenes, the multiple choice question system including UI/UX logic and the pause menu with language select and audio muting.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            
+            {
+                content: `I provided these services using Javascript with Construct 3’s Javascript API and also some visual scripting.`,
+                contentType: ContentType.textBox,
+                columns: 3
+            },
+            
+            {
+                content: `I also provided form integration for linking the game to the petition form and the journey back to the game using url parameters to determine player choices and petition actions.`,
+                contentType: ContentType.textBox,
+                columns: 6
+            },
+            
+            {
+                content: `I also provided the logic for the in game name input including UX logic for iPhone and Android devices to allow a smooth experience with the popup virtual keyboards.`,
+                contentType: ContentType.textBox,
+                columns: 6
+            },
         ],
     }
 };

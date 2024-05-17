@@ -39,6 +39,10 @@ const novabods: ContentCollection = {
                 columns: 4
             },
             {
+                contentType: ContentType.spacer,
+                columns: 2
+            },
+            {
                 content: '/assets/images/content/novabods/content03.png',
                 contentType: ContentType.image,
                 columns: 4
@@ -49,17 +53,37 @@ const novabods: ContentCollection = {
                 columns: 4
             },
             {
-                content:
-`I joined a team of around 10 developers working on this project which was built with Angular and PixiJS targeting desktop browsers and compiled to Android and iOS apps using Cordova.
-
-I worked on several prominent features in the app as well as consulted on almost everything canvas performance focused with PixiJS due to already working with PixiJS when I was part of the wider Education City development team.
-
-I worked on making the app completely responsive on all devices, player ship customisation (such as the ships colour and name), planet selection screen (each planet housed a collection of content around a specific theme and learning age/ability), some of the animation logic around navigating through the planets (this is to select a piece of content to play), a streaming video player using videojs with support for multiple quality versions, fullscreen support, volume controls, video scrubbing controls and subtitles.
-
-I was also pivotal in integrating Education City content and frameworks that I had already built while working on the main Education City development team.`,
-                contentType: ContentType.text,
-                columns: 12
-            }
+                contentType: ContentType.spacer,
+                columns: 2
+            },
+            {
+                content: `I joined a team of around 10 developers working on this project which was built with Angular and PixiJS targeting desktop browsers and compiled to Android and iOS apps using Cordova.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `I worked on several prominent features in the app as well as consulted on almost everything canvas performance focused with PixiJS due to already working with PixiJS when I was part of the wider Education City development team.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                content: `I was also pivotal in integrating Education City content and frameworks that I had already built while working on the main Education City development team.`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                contentType: ContentType.spacer,
+                columns: 3
+            },
+            {
+                content: `I worked on making the app completely responsive on all devices, player ship customisation (such as the ships colour and name), planet selection screen (each planet housed a collection of content around a specific theme and learning age/ability), some of the animation logic around navigating through the planets (this is to select a piece of content to play), a streaming video player using videojs with support for multiple quality versions, fullscreen support, volume controls, video scrubbing controls and subtitles.`,
+                contentType: ContentType.textBox,
+                columns: 6
+            },
+            {
+                contentType: ContentType.spacer,
+                columns: 3
+            },
         ],
     }
 };
