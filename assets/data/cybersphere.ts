@@ -19,7 +19,30 @@ const cybersphere: ContentCollection = {
 `Beat 'em up game engine, for the Playdate handheld console, written entirely in the C programming language.`,
 
         content: [    
+            {
+                contentType: ContentType.spacer,
+                columns: 1,
+            },
             // Main video
+            {
+                content: '/assets/videos/content/cybersphere/video2.gif',
+                contentType: ContentType.image,
+                columns: 6
+            },
+            {
+                content: `
+Latest update includes:
+• Reworked placeholder background graphics using a mixture of tilemap and stamped images (shop signs).
+• Simpler shading style in map graphics.
+• Parallax scrolling background with day/night cycle support (constantly cycling in demo clip for testing).
+`,
+                contentType: ContentType.textBox,
+                columns: 4
+            },
+            {
+                contentType: ContentType.spacer,
+                columns: 1,
+            },
             {
                 content: '/assets/videos/content/cybersphere/video1.gif',
                 contentType: ContentType.image,
